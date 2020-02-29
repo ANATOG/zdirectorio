@@ -152,7 +152,7 @@
         </div>
 
         <!-- Contenido Principal -->
-            @yield('contenido/contenido')
+            @yield('contenido')
         <!-- /Fin del contenido principal -->
     </div>
 
