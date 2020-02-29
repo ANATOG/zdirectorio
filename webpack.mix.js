@@ -29,3 +29,4 @@ const mix = require('laravel-mix');
       'resources/assets/plantilla/js/template.js'
   ], 'public/js/plantilla.js')
   .js(['resources/js/app.js'],'public/js/app.js');
+  //hola
