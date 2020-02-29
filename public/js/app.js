@@ -2085,35 +2085,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37516,7 +37487,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
             _c("i", { staticClass: "fa fa-align-justify" }),
-            _vm._v(" Categorías\n                    "),
+            _vm._v(" Personas\n                    "),
             _c(
               "button",
               {
@@ -37590,7 +37561,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("th", [_vm._v("Nombre")]),
                     _vm._v(" "),
-                    _c("th", [_vm._v("Descripción")]),
+                    _c("th", [_vm._v("Profesión")]),
                     _vm._v(" "),
                     _c("th", [_vm._v("Estado")])
                   ])
@@ -37626,49 +37597,9 @@ var staticRenderFns = [
                       )
                     ]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("Equipos")]),
+                    _c("td", [_vm._v("Maria Hernandez")]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("Dispositivos electrónicos")]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("span", { staticClass: "badge badge-success" }, [
-                        _vm._v("Activo")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-warning btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "modal",
-                            "data-target": "#modalNuevo"
-                          }
-                        },
-                        [_c("i", { staticClass: "icon-pencil" })]
-                      ),
-                      _vm._v("  \n                                    "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "modal",
-                            "data-target": "#modalEliminar"
-                          }
-                        },
-                        [_c("i", { staticClass: "icon-trash" })]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("Equipos")]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("Dispositivos electrónicos")]),
+                    _c("td", [_vm._v("Abogada y Notaria")]),
                     _vm._v(" "),
                     _c("td", [
                       _c("span", { staticClass: "badge badge-success" }, [
@@ -37706,93 +37637,53 @@ var staticRenderFns = [
                       )
                     ]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("Equipos")]),
+                    _c("td", [_vm._v("Edson Esteban")]),
                     _vm._v(" "),
-                    _c("td", [_vm._v("Dispositivos electrónicos")]),
+                    _c("td", [_vm._v("Desarrollador")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("span", { staticClass: "badge badge-success" }, [
+                        _vm._v("Activo")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-warning btn-sm",
+                          attrs: {
+                            type: "button",
+                            "data-toggle": "modal",
+                            "data-target": "#modalNuevo"
+                          }
+                        },
+                        [_c("i", { staticClass: "icon-pencil" })]
+                      ),
+                      _vm._v("  \n                                    "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger btn-sm",
+                          attrs: {
+                            type: "button",
+                            "data-toggle": "modal",
+                            "data-target": "#modalEliminar"
+                          }
+                        },
+                        [_c("i", { staticClass: "icon-trash" })]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("Gabriela Gómez")]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("Diseñadora Industrial")]),
                     _vm._v(" "),
                     _c("td", [
                       _c("span", { staticClass: "badge badge-secondary" }, [
                         _vm._v("Inactivo")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-warning btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "modal",
-                            "data-target": "#modalNuevo"
-                          }
-                        },
-                        [_c("i", { staticClass: "icon-pencil" })]
-                      ),
-                      _vm._v("  \n                                    "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "modal",
-                            "data-target": "#modalEliminar"
-                          }
-                        },
-                        [_c("i", { staticClass: "icon-trash" })]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("Equipos")]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("Dispositivos electrónicos")]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("span", { staticClass: "badge badge-secondary" }, [
-                        _vm._v("Inactivo")
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-warning btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "modal",
-                            "data-target": "#modalNuevo"
-                          }
-                        },
-                        [_c("i", { staticClass: "icon-pencil" })]
-                      ),
-                      _vm._v(" \n                                    "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger btn-sm",
-                          attrs: {
-                            type: "button",
-                            "data-toggle": "modal",
-                            "data-target": "#modalEliminar"
-                          }
-                        },
-                        [_c("i", { staticClass: "icon-trash" })]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("Equipos")]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("Dispositivos electrónicos")]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("span", { staticClass: "badge badge-success" }, [
-                        _vm._v("Activo")
                       ])
                     ])
                   ])
@@ -37867,7 +37758,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Agregar categoría")
+                    _vm._v("Agregar persona")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -37917,12 +37808,12 @@ var staticRenderFns = [
                               type: "text",
                               id: "nombre",
                               name: "nombre",
-                              placeholder: "Nombre de categoría"
+                              placeholder: "Nombre"
                             }
                           }),
                           _vm._v(" "),
                           _c("span", { staticClass: "help-block" }, [
-                            _vm._v("(*) Ingrese el nombre de la categoría")
+                            _vm._v("(*) Ingrese el nombre de la persona")
                           ])
                         ])
                       ]),
@@ -37934,7 +37825,7 @@ var staticRenderFns = [
                             staticClass: "col-md-3 form-control-label",
                             attrs: { for: "email-input" }
                           },
-                          [_vm._v("Descripción")]
+                          [_vm._v("Profesión")]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-md-9" }, [
@@ -37944,7 +37835,7 @@ var staticRenderFns = [
                               type: "email",
                               id: "descripcion",
                               name: "descripcion",
-                              placeholder: "Enter Email"
+                              placeholder: "Ingrese Profesión"
                             }
                           })
                         ])
@@ -38002,7 +37893,7 @@ var staticRenderFns = [
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h4", { staticClass: "modal-title" }, [
-                    _vm._v("Eliminar Categoría")
+                    _vm._v("Eliminar Persona")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -38024,7 +37915,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-body" }, [
-                  _c("p", [_vm._v("Estas seguro de eliminar la categoría?")])
+                  _c("p", [_vm._v("Estas seguro de eliminar a la persona?")])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "modal-footer" }, [

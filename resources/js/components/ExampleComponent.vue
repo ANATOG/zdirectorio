@@ -10,7 +10,7 @@
                 <!-- Ejemplo de tabla Listado -->
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i> Categorías
+                        <i class="fa fa-align-justify"></i> Personas
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalNuevo">
                             <i class="icon-plus"></i>&nbsp;Nuevo
                         </button>
@@ -33,7 +33,7 @@
                                 <tr>
                                     <th>Opciones</th>
                                     <th>Nombre</th>
-                                    <th>Descripción</th>
+                                    <th>Profesión</th>
                                     <th>Estado</th>
                                 </tr>
                             </thead>
@@ -47,8 +47,8 @@
                                           <i class="icon-trash"></i>
                                         </button>
                                     </td>
-                                    <td>Equipos</td>
-                                    <td>Dispositivos electrónicos</td>
+                                    <td>Maria Hernandez</td>
+                                    <td>Abogada y Notaria</td>
                                     <td>
                                         <span class="badge badge-success">Activo</span>
                                     </td>
@@ -62,8 +62,8 @@
                                           <i class="icon-trash"></i>
                                         </button>
                                     </td>
-                                    <td>Equipos</td>
-                                    <td>Dispositivos electrónicos</td>
+                                    <td>Edson Esteban</td>
+                                    <td>Desarrollador</td>
                                     <td>
                                         <span class="badge badge-success">Activo</span>
                                     </td>
@@ -77,42 +77,13 @@
                                           <i class="icon-trash"></i>
                                         </button>
                                     </td>
-                                    <td>Equipos</td>
-                                    <td>Dispositivos electrónicos</td>
+                                    <td>Gabriela Gómez</td>
+                                    <td>Diseñadora Industrial</td>
                                     <td>
                                         <span class="badge badge-secondary">Inactivo</span>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalNuevo">
-                                          <i class="icon-pencil"></i>
-                                        </button> &nbsp;
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalEliminar">
-                                          <i class="icon-trash"></i>
-                                        </button>
-                                    </td>
-                                    <td>Equipos</td>
-                                    <td>Dispositivos electrónicos</td>
-                                    <td>
-                                        <span class="badge badge-secondary">Inactivo</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalNuevo">
-                                          <i class="icon-pencil"></i>
-                                        </button>&nbsp;
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalEliminar">
-                                          <i class="icon-trash"></i>
-                                        </button>
-                                    </td>
-                                    <td>Equipos</td>
-                                    <td>Dispositivos electrónicos</td>
-                                    <td>
-                                        <span class="badge badge-success">Activo</span>
-                                    </td>
-                                </tr>
+                                </tr>                                
+                               
                             </tbody>
                         </table>
                         <nav>
@@ -146,7 +117,7 @@
                 <div class="modal-dialog modal-primary modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Agregar categoría</h4>
+                            <h4 class="modal-title">Agregar persona</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">×</span>
                             </button>
@@ -156,14 +127,14 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="text-input">Nombre</label>
                                     <div class="col-md-9">
-                                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre de categoría">
-                                        <span class="help-block">(*) Ingrese el nombre de la categoría</span>
+                                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre">
+                                        <span class="help-block">(*) Ingrese el nombre de la persona</span>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="email-input">Descripción</label>
+                                    <label class="col-md-3 form-control-label" for="email-input">Profesión</label>
                                     <div class="col-md-9">
-                                        <input type="email" id="descripcion" name="descripcion" class="form-control" placeholder="Enter Email">
+                                        <input type="email" id="descripcion" name="descripcion" class="form-control" placeholder="Ingrese Profesión">
                                     </div>
                                 </div>
                             </form>
@@ -183,13 +154,13 @@
                 <div class="modal-dialog modal-danger" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Eliminar Categoría</h4>
+                            <h4 class="modal-title">Eliminar Persona</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">×</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Estas seguro de eliminar la categoría?</p>
+                            <p>Estas seguro de eliminar a la persona?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
