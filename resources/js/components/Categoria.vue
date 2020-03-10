@@ -177,6 +177,29 @@
 
 <script>
     export default {
+        data (){
+            return {
+                nombre : '',
+                descripcion : ''
+
+            }
+        },
+        methods : {
+            listarCategoria(){
+                axios.get('/categoria').then(function (response) {
+                    // handle success
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });
+            }
+
+        },
         mounted() {
             console.log('Component mounted.')
         }
