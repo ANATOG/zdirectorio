@@ -198,7 +198,7 @@
                             case 'registrar':
                             {
                                 this.modal = 1;
-                                this.tituloModal = 'Registrar Categoria';
+                                this.tituloModal = 'Registrar Categoría';
                                 this.nombre = '';
                                 this.descripcion = '';
                                 this.tipoAccion= 1;
