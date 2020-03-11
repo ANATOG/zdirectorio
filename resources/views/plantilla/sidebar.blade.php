@@ -12,7 +12,7 @@
                         <a class="nav-link" href="#"><i class="icon-organization"></i>Empresas</a>
                     </li>
                     <li  @click="menu=3" class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-user"></i>Categorias</a>
+                        <a class="nav-link" href="#"><i class="icon-list"></i>Categorias</a>
                     </li> 
                     <li  @click="menu=4" class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-settings"></i>Configuración</a>

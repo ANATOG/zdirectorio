@@ -10,7 +10,7 @@
                 <!-- Ejemplo de tabla Listado -->
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i> Personas
+                        <i class="fa fa-align-justify"></i> Categorías
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalNuevo">
                             <i class="icon-plus"></i>&nbsp;Nuevo
                         </button>
@@ -33,12 +33,12 @@
                                 <tr>
                                     <th>Opciones</th>
                                     <th>Nombre</th>
-                                    <th>Profesión</th>
+                                    <th>Descripción</th>
                                     <th>Estado</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr v-for="categoria in arrayCategoria" :key="categoria.id">
                                     <td>
                                         <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalNuevo">
                                           <i class="icon-pencil"></i>
@@ -47,42 +47,18 @@
                                           <i class="icon-trash"></i>
                                         </button>
                                     </td>
-                                    <td>Maria Hernandez</td>
-                                    <td>Abogada y Notaria</td>
+                                    <td v-text="categoria.nombre"></td>
+                                    <td v-text="categoria.descripcion"></td>
                                     <td>
-                                        <span class="badge badge-success">Activo</span>
+                                        <div v-if="categoria.condicion">
+                                            <span class="badge badge-success">Activo</span>
+                                        </div>
+                                        <div v-else>
+                                            <span class="badge badge-danger">Inactivo</span>
+                                        </div>
+                                        
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalNuevo">
-                                          <i class="icon-pencil"></i>
-                                        </button> &nbsp;
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalEliminar">
-                                          <i class="icon-trash"></i>
-                                        </button>
-                                    </td>
-                                    <td>Edson Esteban</td>
-                                    <td>Desarrollador</td>
-                                    <td>
-                                        <span class="badge badge-success">Activo</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalNuevo">
-                                          <i class="icon-pencil"></i>
-                                        </button> &nbsp;
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalEliminar">
-                                          <i class="icon-trash"></i>
-                                        </button>
-                                    </td>
-                                    <td>Gabriela Gómez</td>
-                                    <td>Diseñadora Industrial</td>
-                                    <td>
-                                        <span class="badge badge-secondary">Inactivo</span>
-                                    </td>
-                                </tr>                                
+                                </tr>           
                                
                             </tbody>
                         </table>
@@ -180,15 +156,17 @@
         data (){
             return {
                 nombre : '',
-                descripcion : ''
+                descripcion : '',
+                arrayCategoria : []
 
             }
         },
         methods : {
             listarCategoria(){
+                let me=this;
                 axios.get('/categoria').then(function (response) {
                     // handle success
-                    console.log(response);
+                   me.arrayCategoria = response.data;
                 })
                 .catch(function (error) {
                     // handle error
@@ -201,7 +179,7 @@
 
         },
         mounted() {
-            console.log('Component mounted.')
+            this.listarCategoria();
         }
     }
 </script>
