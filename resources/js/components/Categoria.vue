@@ -103,22 +103,26 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="text-input">Nombre</label>
                                     <div class="col-md-9">
-                                        <input type="text" iv-model="nombre" class="form-control" placeholder="Nombre">
-                                        <span class="help-block">(*) Ingrese el nombre de la categoría</span>
+                                        <input type="text" v-model="nombre" class="form-control" placeholder="Nombre">                                        
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="email-input">Descripción</label>
                                     <div class="col-md-9">
-                                        <input type="email" v-model="descripcion" class="form-control" placeholder="Ingrese Profesión">
+                                        <input type="email" v-model="descripcion" class="form-control" placeholder="Ingrese descripción">
+                                    </div>
+                                </div>
+                                <div v-show="errorCategoria" class="form-group row div-error">
+                                    <div class="text-center text-error">
+                                        <div v-for="error in errorMostrarMsjCategoria" :key="error" v-text="error">                                        </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" @click="cerrarModal()" >Cerrar</button>
-                            <button type="button" v-if="tipoAccion==1" class="btn btn-primary">Guardar</button>
-                            <button type="button" v-if="tipoAccion==2" class="btn btn-primary">Actualizar</button>
+                            <button type="button" v-if="tipoAccion==1" class="btn btn-primary" @click="registrarCategoria()">Guardar</button>
+                            <button type="button" v-if="tipoAccion==2" class="btn btn-primary" @click="actualizarCategoria()" >Actualizar</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
@@ -156,13 +160,15 @@
     export default {
         data (){
             return {
+                categoria_id : 0,
                 nombre : '',
                 descripcion : '',
                 arrayCategoria : [],
                 modal : 0,
                 tituloModal : '',
-                tipoAccion : 0
-
+                tipoAccion : 0, 
+                errorCategoria: 0,
+                errorMostrarMsjCategoria : []
             }
         },
         methods : {
@@ -181,7 +187,55 @@
                 });
             },
             registrarCategoria(){
+                
+                if(this.validarCategoria()){
+                    return;
+                }
+                let me  = this;
+                axios.post('/categoria/registrar',{
+                    'nombre': this.nombre,
+                    'descripcion': this.descripcion
+                }).then(function (response) {
+                   me.cerrarModal();
+                   me.listarCategoria();
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });               
+            },
+            actualizarCategoria(){
+                if(this.validarCategoria()){
+                    return;
+                }
+                let me  = this;
+                axios.put('/categoria/actualizar',{
+                    'nombre': this.nombre,
+                    'descripcion': this.descripcion,
+                    'id': this.categoria_id
+                }).then(function (response) {
+                   me.cerrarModal();
+                   me.listarCategoria();
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });       
+            },
+            validarCategoria(){
+                this.errorCategoria=0;
+                this.errorMostrarMsjCategoria=[];
 
+                if(!this.nombre)this.errorMostrarMsjCategoria.push("El nombre de la categoría no puede estar vacio");
+
+                if(this.errorMostrarMsjCategoria.length) this.errorCategoria=1;
+                return this.errorCategoria;
             },
             cerrarModal() {
                 this.modal=0;
@@ -206,7 +260,14 @@
                             }
                             case 'actualizar':
                             {
-                                
+                                //console.log(data);    
+                                this.modal=1;
+                                this.tituloModal='Actualizar categoría';
+                                this.tipoAccion=2;
+                                this.nombre=data['nombre'];
+                                this.descripcion=data['descripcion'];
+                                this.categoria_id=data['id'];
+
                             }
                         }
                     }
@@ -231,5 +292,12 @@
         position: absolute !important;
         background-color: #3c29297a !important;
     }
-    
+    .div-error {
+        display: flex;
+        justify-content: center;
+    }
+    .text-error {
+        color: red !important;
+        font-weight: bold;
+    }  
 </style>
