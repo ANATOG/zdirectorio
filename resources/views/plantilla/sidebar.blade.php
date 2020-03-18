@@ -15,6 +15,12 @@
                         <a class="nav-link" href="#"><i class="icon-list"></i>Categorias</a>
                     </li> 
                     <li  @click="menu=4" class="nav-item">
+                        <a class="nav-link" href="#"><i class="icon-globe"></i>Departamentos</a>
+                    </li> 
+                    <li  @click="menu=5" class="nav-item">
+                        <a class="nav-link" href="#"><i class="icon-map"></i>Municipios</a>
+                    </li>
+                    <li  @click="menu=8" class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-settings"></i>Configuración</a>
                     </li>
                 </ul>

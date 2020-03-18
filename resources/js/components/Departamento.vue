@@ -1,4 +1,4 @@
-<template>
+ <template>
     <main class="main">
             <!-- Breadcrumb -->
             <ol class="breadcrumb">
@@ -8,8 +8,8 @@
                 <!-- Ejemplo de tabla Listado -->
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i> Categorías
-                        <button type="button" class="btn btn-secondary" @click="abrirModal('categoria','registrar')" >
+                        <i class="fa fa-align-justify"></i> Departamentos
+                        <button type="button" class="btn btn-secondary" @click="abrirModal('departamento','registrar')" >
                             <i class="icon-plus"></i>&nbsp;Nuevo
                         </button>
                     </div>
@@ -19,10 +19,9 @@
                                 <div class="input-group">
                                     <select class="form-control col-md-3" v-model="criterio">
                                       <option value="nombre">Nombre</option>
-                                      <option value="descripcion">Descripción</option>
                                     </select>
-                                    <input type="text" v-model="buscar" @keyup.enter="listarCategoria(1,buscar,criterio)" class="form-control" placeholder="Texto a buscar">
-                                    <button type="submit" @click="listarCategoria(1,buscar,criterio)" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
+                                    <input type="text" v-model="buscar" @keyup.enter="listarDepartamento(1,buscar,criterio)" class="form-control" placeholder="Texto a buscar">
+                                    <button type="submit" @click="listarDepartamento(1,buscar,criterio)" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -31,31 +30,29 @@
                                 <tr>
                                     <th>Opciones</th>
                                     <th>Nombre</th>
-                                    <th>Descripción</th>
                                     <th>Estado</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="categoria in arrayCategoria" :key="categoria.id">
+                                <tr v-for="departamento in arrayDepartamento" :key="departamento.id">
                                     <td>
-                                        <button type="button" class="btn btn-warning btn-sm"  @click="abrirModal('categoria','actualizar',categoria)" >
+                                        <button type="button" class="btn btn-warning btn-sm"  @click="abrirModal('departamento','actualizar',departamento)" >
                                           <i class="icon-pencil"></i>
                                         </button> &nbsp;
-                                        <template v-if="categoria.condicion">
-                                            <button type="button" class="btn btn-danger btn-sm" @click="desactivarCategoria(categoria.id)">
+                                        <template v-if="departamento.condicion">
+                                            <button type="button" class="btn btn-danger btn-sm" @click="desactivarDepartamento(departamento.id)">
                                                 <i class="icon-trash"></i>
                                             </button>
                                         </template>
                                         <template v-else>
-                                            <button type="button" class="btn btn-success btn-sm" @click="activarCategoria(categoria.id)">
+                                            <button type="button" class="btn btn-success btn-sm" @click="activarDepartamento(departamento.id)">
                                                 <i class="icon-check"></i>
                                             </button>
                                         </template>
                                     </td>
-                                    <td v-text="categoria.nombre"></td>
-                                    <td v-text="categoria.descripcion"></td>
+                                    <td v-text="departamento.nombre"></td>
                                     <td>
-                                        <div v-if="categoria.condicion">
+                                        <div v-if="departamento.condicion">
                                             <span class="badge badge-success">Activo</span>
                                         </div>
                                         <div v-else>
@@ -103,23 +100,17 @@
                                         <input type="text" v-model="nombre" class="form-control" placeholder="Nombre">                                        
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="email-input">Descripción</label>
-                                    <div class="col-md-9">
-                                        <input type="email" v-model="descripcion" class="form-control" placeholder="Ingrese descripción">
-                                    </div>
-                                </div>
-                                <div v-show="errorCategoria" class="form-group row div-error">
+                                <div v-show="errorDepartamento" class="form-group row div-error">
                                     <div class="text-center text-error">
-                                        <div v-for="error in errorMostrarMsjCategoria" :key="error" v-text="error">                                        </div>
+                                        <div v-for="error in errorMostrarMsjDepartamento" :key="error" v-text="error">                                        </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" @click="cerrarModal()" >Cerrar</button>
-                            <button type="button" v-if="tipoAccion==1" class="btn btn-primary" @click="registrarCategoria()">Guardar</button>
-                            <button type="button" v-if="tipoAccion==2" class="btn btn-primary" @click="actualizarCategoria()" >Actualizar</button>
+                            <button type="button" v-if="tipoAccion==1" class="btn btn-primary" @click="registrarDepartamento()">Guardar</button>
+                            <button type="button" v-if="tipoAccion==2" class="btn btn-primary" @click="actualizarDepartamento()" >Actualizar</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
@@ -134,15 +125,14 @@
     export default {
         data (){
             return {
-                categoria_id : 0,
+                departamento_id : 0,
                 nombre : '',
-                descripcion : '',
-                arrayCategoria : [],
+                arrayDepartamento : [],
                 modal : 0,
                 tituloModal : '',
                 tipoAccion : 0, 
-                errorCategoria: 0,
-                errorMostrarMsjCategoria : [],
+                errorDepartamento: 0,
+                errorMostrarMsjDepartamento : [],
                 pagination:{
                     'total' : 0,        
                     'current_page' : 0, 
@@ -185,13 +175,13 @@
             }
         },
         methods : {
-            listarCategoria(page, buscar, criterio){
+            listarDepartamento(page, buscar, criterio){
                 let me=this;
-                var url='/categoria?page='+page + '&buscar='+buscar+'&criterio='+criterio;
+                var url='/departamento?page='+page + '&buscar='+buscar+'&criterio='+criterio;
                 axios.get(url).then(function (response) {
                     // handle success
                     var respuesta=response.data;
-                   me.arrayCategoria = respuesta.categorias.data;
+                   me.arrayDepartamento = respuesta.departamentos.data;
                    me.pagination=respuesta.pagination;
                 })
                 .catch(function (error) {
@@ -207,20 +197,19 @@
                 //actualiza la pagina actual
                 me.pagination.current_page = page;
                 //enviar la peticion para visualizar la data de esa página 
-                me.listarCategoria(page, buscar, criterio);
+                me.listarDepartamento(page, buscar, criterio);
             },
-            registrarCategoria(){
+            registrarDepartamento(){
                 
-                if(this.validarCategoria()){
+                if(this.validarDepartamento()){
                     return;
                 }
                 let me  = this;
-                axios.post('/categoria/registrar',{
-                    'nombre': this.nombre,
-                    'descripcion': this.descripcion
+                axios.post('/departamento/registrar',{
+                    'nombre': this.nombre
                 }).then(function (response) {
                    me.cerrarModal();
-                   me.listarCategoria(1,'','nombre');
+                   me.listarDepartamento(1,'','nombre');
                 })
                 .catch(function (error) {
                     // handle error
@@ -230,18 +219,17 @@
                     // always executed
                 });               
             },
-            actualizarCategoria(){
-                if(this.validarCategoria()){
+            actualizarDepartamento(){
+                if(this.validarDepartamento()){
                     return;
                 }
                 let me  = this;
-                axios.put('/categoria/actualizar',{
+                axios.put('/departamento/actualizar',{
                     'nombre': this.nombre,
-                    'descripcion': this.descripcion,
-                    'id': this.categoria_id
+                    'id': this.departamento_id
                 }).then(function (response) {
                    me.cerrarModal();
-                   me.listarCategoria(1,'','nombre');
+                   me.listarDepartamento(1,'','nombre');
                 })
                 .catch(function (error) {
                     // handle error
@@ -251,7 +239,7 @@
                     // always executed
                 });       
             },
-            desactivarCategoria(id){
+            desactivarDepartamento(id){
                 const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',
@@ -261,7 +249,7 @@
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Está seguro de desactivar esta categoría?',
+                title: 'Está seguro de desactivar estde departamento?',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
@@ -270,10 +258,10 @@
                 }).then((result) => {
                 if (result.value) {
                     let me  = this;
-                    axios.put('/categoria/desactivar',{
+                    axios.put('/departamento/desactivar',{
                         'id': id
                     }).then(function (response) {
-                        me.listarCategoria(1,'','nombre');
+                        me.listarDepartamento(1,'','nombre');
                          swalWithBootstrapButtons.fire(
                             'Desactivado!',
                             'El registro ha sido desactivado con éxito.',
@@ -296,7 +284,7 @@
                 }
                 })
             },
-            activarCategoria(id){
+            activarDepartamento(id){
                 const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',
@@ -306,7 +294,7 @@
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Está seguro de activar esta categoría?',
+                title: 'Está seguro de activar este departamento?',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
@@ -315,10 +303,10 @@
                 }).then((result) => {
                 if (result.value) {
                     let me  = this;
-                    axios.put('/categoria/activar',{
+                    axios.put('/departamento/activar',{
                         'id': id
                     }).then(function (response) {
-                        me.listarCategoria(1,'', 'nombre');
+                        me.listarDepartamento(1,'', 'nombre');
                          swalWithBootstrapButtons.fire(
                             'Activado!',
                             'El registro ha sido activado con éxito.',
@@ -341,33 +329,31 @@
                 }
                 })
             },
-            validarCategoria(){
-                this.errorCategoria=0;
-                this.errorMostrarMsjCategoria=[];
+            validarDepartamento(){
+                this.errorDepartamento=0;
+                this.errorMostrarMsjDepartamento=[];
 
-                if(!this.nombre)this.errorMostrarMsjCategoria.push("El nombre de la categoría no puede estar vacio");
+                if(!this.nombre)this.errorMostrarMsjDepartamento.push("El nombre del departamento no puede estar vacio");
 
-                if(this.errorMostrarMsjCategoria.length) this.errorCategoria=1;
-                return this.errorCategoria;
+                if(this.errorMostrarMsjDepartamento.length) this.errorDepartamento=1;
+                return this.errorDepartamento;
             },
             cerrarModal() {
                 this.modal=0;
                 this.tituloModal='';
                 this.nombre='';
-                this.descripcion='';
             },
             abrirModal(modelo, accion, data=[]){
                 switch(modelo){
-                    case "categoria":
+                    case "departamento":
                     {
                         switch(accion)
                         {
                             case 'registrar':
                             {
                                 this.modal = 1;
-                                this.tituloModal = 'Registrar Categoría';
+                                this.tituloModal = 'Registrar Departamento';
                                 this.nombre = '';
-                                this.descripcion = '';
                                 this.tipoAccion= 1;
                                 break;
                             }
@@ -375,11 +361,10 @@
                             {
                                 //console.log(data);    
                                 this.modal=1;
-                                this.tituloModal='Actualizar categoría';
+                                this.tituloModal='Actualizar departamento';
                                 this.tipoAccion=2;
                                 this.nombre=data['nombre'];
-                                this.descripcion=data['descripcion'];
-                                this.categoria_id=data['id'];
+                                this.departamento_id=data['id'];
 
                             }
                         }
@@ -388,7 +373,7 @@
             }
         },
         mounted() {
-            this.listarCategoria(1,this.buscar,this.criterio);
+            this.listarDepartamento(1,this.buscar,this.criterio);
         }
     }
 </script>

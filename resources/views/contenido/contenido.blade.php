@@ -17,6 +17,14 @@
         </template>
 
         <template v-if="menu==4">
+        <departamento></departamento>         
+        </template>
+
+        <template v-if="menu==5">
+        <municipio></municipio>         
+        </template>
+
+        <template v-if="menu==8">
         <h1>Configuracion</h1>          
         </template>
         
