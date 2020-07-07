@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/panel', function () {
     return view('contenido/contenido');
+});
+
+Route::get('/', function () {
+    return view('home/homeprincipal');
 });
 
 Route::get('/categoria', 'CategoriaController@index');

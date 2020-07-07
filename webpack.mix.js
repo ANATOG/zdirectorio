@@ -16,12 +16,14 @@ const mix = require('laravel-mix');
 
 
    mix.styles([
+       'resources/assets/plantilla/css/main.css',
       'resources/assets/plantilla/css/font-awesome.min.css',
       'resources/assets/plantilla/css/simple-line-icons.min.css',
       'resources/assets/plantilla/css/style.css',
       'resources/assets/plantilla/vue-form-wizard.min.css'
   ], 'public/css/plantilla.css')
   .scripts([
+      'resources/assets/plantilla/js/main.js',
       'resources/assets/plantilla/js/jquery.min.js',
       'resources/assets/plantilla/js/popper.min.js',
       'resources/assets/plantilla/js/bootstrap.min.js',
