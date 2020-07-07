@@ -20,6 +20,7 @@ Route::post('/categoria/registrar', 'CategoriaController@store');
 Route::put('/categoria/actualizar', 'CategoriaController@update');
 Route::put('/categoria/desactivar', 'CategoriaController@desactivar');
 Route::put('/categoria/activar', 'CategoriaController@activar');
+Route::get('/categoria/selectCategoria', 'CategoriaController@selectCategoria');
 
 
 Route::get('/departamento', 'DepartamentoController@index');
@@ -37,3 +38,25 @@ Route::put('/municipio/desactivar', 'MunicipioController@desactivar');
 Route::put('/municipio/activar', 'MunicipioController@activar');
 Route::put('/municipio/selectDepartamento', 'MunicipioController@selectDepartamento');
 
+
+Route::get('/red', 'RedController@index');
+Route::post('/red/registrar', 'RedController@store');
+Route::put('/red/actualizar', 'RedController@update');
+Route::put('/red/desactivar', 'RedController@desactivar');
+Route::put('/red/activar', 'RedController@activar');
+Route::put('/red/selectDepartamento', 'RedController@selectDepartamento');
+
+
+Route::get('/tipo', 'TipoController@index');
+Route::post('/tipo/registrar', 'TipoController@store');
+Route::put('/tipo/actualizar', 'TipoController@update');
+Route::put('/tipo/desactivar', 'TipoController@desactivar');
+Route::put('/tipo/activar', 'TipoController@activar');
+Route::put('/tipo/selectTipo', 'TipoController@selectDepartamento');
+
+
+Route::get('/persona', 'PersonaController@index');
+Route::post('/persona/registrar', 'PersonaController@store');
+Route::put('/persona/actualizar', 'PersonaController@update');
+Route::put('/persona/desactivar', 'PersonaController@desactivar');
+Route::put('/persona/activar', 'PersonaController@activar');

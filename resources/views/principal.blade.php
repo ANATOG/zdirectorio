@@ -10,6 +10,7 @@
     <meta name="keyword" content="Sistema ventas Laravel Vue Js, Sistema compras Laravel Vue Js">
     <link rel="shortcut icon" href="
     img/favicon.png">
+    
     <title>Sistema Ventas - IncanatoIT</title>
     <!-- Main styles for this application -->
     <link href="css/plantilla.css" rel="stylesheet">

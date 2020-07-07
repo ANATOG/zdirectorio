@@ -1,3 +1,5 @@
+
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -23,6 +25,10 @@ window.Vue = require('vue');
 Vue.component('categoria', require('./components/Categoria.vue').default);
 Vue.component('departamento', require('./components/Departamento.vue').default);
 Vue.component('municipio', require('./components/Municipio.vue').default);
+Vue.component('red', require('./components/Red.vue').default);
+Vue.component('tipo', require('./components/Tipo.vue').default);
+Vue.component('persona', require('./components/Persona.vue').default);
+//Vue.component('persona', require('./components/wizard.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

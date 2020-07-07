@@ -5,7 +5,7 @@
         </template>
 
         <template v-if="menu==1">
-            <h1>Personas</h1>                
+            <persona></persona>                
         </template>
 
         <template v-if="menu==2">
@@ -22,6 +22,14 @@
 
         <template v-if="menu==5">
         <municipio></municipio>         
+        </template>
+
+        <template v-if="menu==6">
+        <red></red>         
+        </template>
+
+        <template v-if="menu==7">
+        <tipo></tipo>         
         </template>
 
         <template v-if="menu==8">

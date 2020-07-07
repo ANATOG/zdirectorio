@@ -12,4 +12,9 @@ class Municipio extends Model
     {
         return $this->belongsTo('App\Departamento');
     }
+
+    public function direcciones()
+    {
+        return $this->hasMany('App\Direccion');
+    }
 }

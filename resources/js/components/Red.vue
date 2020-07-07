@@ -8,8 +8,8 @@
                 <!-- Ejemplo de tabla Listado -->
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i> Municipios
-                        <button type="button" class="btn btn-secondary" @click="abrirModal('municipio','registrar')" >
+                        <i class="fa fa-align-justify"></i> Redes Sociales
+                        <button type="button" class="btn btn-secondary" @click="abrirModal('red','registrar')" >
                             <i class="icon-plus"></i>&nbsp;Nuevo
                         </button>
                     </div>
@@ -20,8 +20,8 @@
                                     <select class="form-control col-md-3" v-model="criterio">
                                       <option value="nombre">Nombre</option>
                                     </select>
-                                    <input type="text" v-model="buscar" @keyup.enter="listarMunicipio(1,buscar,criterio)" class="form-control" placeholder="Texto a buscar">
-                                    <button type="submit" @click="listarMunicipio(1,buscar,criterio)" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
+                                    <input type="text" v-model="buscar" @keyup.enter="listarRed(1,buscar,criterio)" class="form-control" placeholder="Texto a buscar">
+                                    <button type="submit" @click="listarRed(1,buscar,criterio)" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -30,31 +30,29 @@
                                 <tr>
                                     <th>Opciones</th>
                                     <th>Nombre</th>
-                                    <th>Departamento</th>
                                     <th>Estado</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="municipio in arrayMunicipio" :key="municipio.id">
+                                <tr v-for="red in arrayRed" :key="red.id">
                                     <td>
-                                        <button type="button" class="btn btn-warning btn-sm"  @click="abrirModal('municipio','actualizar',municipio)" >
+                                        <button type="button" class="btn btn-warning btn-sm"  @click="abrirModal('red','actualizar',red)" >
                                           <i class="icon-pencil"></i>
                                         </button> &nbsp;
-                                        <template v-if="municipio.condicion">
-                                            <button type="button" class="btn btn-danger btn-sm" @click="desactivarMunicipio(municipio.id)">
+                                        <template v-if="red.condicion">
+                                            <button type="button" class="btn btn-danger btn-sm" @click="desactivarRed(red.id)">
                                                 <i class="icon-trash"></i>
                                             </button>
                                         </template>
                                         <template v-else>
-                                            <button type="button" class="btn btn-success btn-sm" @click="activarMunicipio(municipio.id)">
+                                            <button type="button" class="btn btn-success btn-sm" @click="activarRed(red.id)">
                                                 <i class="icon-check"></i>
                                             </button>
                                         </template>
                                     </td>
-                                    <td v-text="municipio.nombre"></td>
-                                    <td v-text="municipio.departamento"></td>
+                                    <td v-text="red.nombre"></td>
                                     <td>
-                                        <div v-if="municipio.condicion">
+                                        <div v-if="red.condicion">
                                             <span class="badge badge-success">Activo</span>
                                         </div>
                                         <div v-else>
@@ -96,32 +94,23 @@
                         </div>
                         <div class="modal-body">
                             <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                 <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Departamento</label>
-                                    <div class="col-md-9">
-                                        <select class="form-control" v-model="idDepartamento">
-                                            <option value="0" disabled>Seleccione</option>
-                                            <option v-for="departamento in arrayDepartamento" :key="departamento.id" :value="departamento.id" v-text="departamento.nombre"></option>
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="text-input">Nombre</label>
                                     <div class="col-md-9">
                                         <input type="text" v-model="nombre" class="form-control" placeholder="Nombre">                                        
                                     </div>
                                 </div>
-                                <div v-show="errorMunicipio" class="form-group row div-error">
+                                <div v-show="errorRed" class="form-group row div-error">
                                     <div class="text-center text-error">
-                                        <div v-for="error in errorMostrarMsjMunicipio" :key="error" v-text="error">                                        </div>
+                                        <div v-for="error in errorMostrarMsjRed" :key="error" v-text="error">                                        </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" @click="cerrarModal()" >Cerrar</button>
-                            <button type="button" v-if="tipoAccion==1" class="btn btn-primary" @click="registrarMunicipio()">Guardar</button>
-                            <button type="button" v-if="tipoAccion==2" class="btn btn-primary" @click="actualizarMunicipio()" >Actualizar</button>
+                            <button type="button" v-if="tipoAccion==1" class="btn btn-primary" @click="registrarRed()">Guardar</button>
+                            <button type="button" v-if="tipoAccion==2" class="btn btn-primary" @click="actualizarRed()" >Actualizar</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
@@ -136,15 +125,14 @@
     export default {
         data (){
             return {
-                municipio_id : 0,
+                red_id : 0,
                 nombre : '',
-                idDepartamento : 0,
-                arrayMunicipio : [],
+                arrayRed : [],
                 modal : 0,
                 tituloModal : '',
                 tipoAccion : 0, 
-                errorMunicipio: 0,
-                errorMostrarMsjMunicipio : [],
+                errorRed: 0,
+                errorMostrarMsjRed : [],
                 pagination:{
                     'total' : 0,        
                     'current_page' : 0, 
@@ -155,8 +143,7 @@
                 },
                 offset:3,
                 criterio: 'nombre',
-                buscar: '',
-                arrayDepartamento: []
+                buscar: ''
             }
         },
         computed:{
@@ -188,29 +175,14 @@
             }
         },
         methods : {
-            listarMunicipio(page, buscar, criterio){
+            listarRed(page, buscar, criterio){
                 let me=this;
-                var url='/municipio?page='+page + '&buscar='+buscar+'&criterio='+criterio;
+                var url='/red?page='+page + '&buscar='+buscar+'&criterio='+criterio;
                 axios.get(url).then(function (response) {
                     // handle success
                     var respuesta=response.data;
-                   me.arrayMunicipio = respuesta.municipios.data;
+                   me.arrayRed = respuesta.redes.data;
                    me.pagination=respuesta.pagination;
-                })
-                .catch(function (error) {
-                    // handle error
-                    console.log(error);
-                })
-                .then(function () {
-                    // always executed
-                });
-            },            
-            selectDepartamento(){
-                let me=this;
-                var url='/departamento/selectDepartamento';
-                axios.get(url).then(function (response) {
-                    var respuesta=response.data;
-                    me.arrayDepartamento = respuesta.departamentos;
                 })
                 .catch(function (error) {
                     // handle error
@@ -225,20 +197,19 @@
                 //actualiza la pagina actual
                 me.pagination.current_page = page;
                 //enviar la peticion para visualizar la data de esa página 
-                me.listarMunicipio(page, buscar, criterio);
+                me.listarRed(page, buscar, criterio);
             },
-            registrarMunicipio(){
+            registrarRed(){
                 
-                if(this.validarMunicipio()){
+                if(this.validarRed()){
                     return;
                 }
                 let me  = this;
-                axios.post('/municipio/registrar',{
-                    'nombre': this.nombre,
-                    'idDepartamento': this.idDepartamento
+                axios.post('/red/registrar',{
+                    'nombre': this.nombre
                 }).then(function (response) {
                    me.cerrarModal();
-                   me.listarMunicipio(1,'','nombre');
+                   me.listarRed(1,'','nombre');
                 })
                 .catch(function (error) {
                     // handle error
@@ -248,18 +219,17 @@
                     // always executed
                 });               
             },
-            actualizarMunicipio(){
-                if(this.validarMunicipio()){
+            actualizarRed(){
+                if(this.validarRed()){
                     return;
                 }
                 let me  = this;
-                axios.put('/municipio/actualizar',{
+                axios.put('/red/actualizar',{
                     'nombre': this.nombre,
-                    'id': this.municipio_id,
-                    'idDepartamento': this.idDepartamento
+                    'id': this.red_id
                 }).then(function (response) {
                    me.cerrarModal();
-                   me.listarMunicipio(1,'','nombre');
+                   me.listarRed(1,'','nombre');
                 })
                 .catch(function (error) {
                     // handle error
@@ -269,7 +239,7 @@
                     // always executed
                 });       
             },
-            desactivarMunicipio(id){
+            desactivarRed(id){
                 const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',
@@ -279,7 +249,7 @@
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Está seguro de desactivar este municipio?',
+                title: 'Está seguro de desactivar este registro?',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
@@ -288,10 +258,10 @@
                 }).then((result) => {
                 if (result.value) {
                     let me  = this;
-                    axios.put('/municipio/desactivar',{
+                    axios.put('/red/desactivar',{
                         'id': id
                     }).then(function (response) {
-                        me.listarMunicipio(1,'','nombre');
+                        me.listarRed(1,'','nombre');
                          swalWithBootstrapButtons.fire(
                             'Desactivado!',
                             'El registro ha sido desactivado con éxito.',
@@ -314,7 +284,7 @@
                 }
                 })
             },
-            activarMunicipio(id){
+            activarRed(id){
                 const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',
@@ -324,7 +294,7 @@
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Está seguro de activar este municipio?',
+                title: 'Está seguro de activar este registro?',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
@@ -333,10 +303,10 @@
                 }).then((result) => {
                 if (result.value) {
                     let me  = this;
-                    axios.put('/municipio/activar',{
+                    axios.put('/red/activar',{
                         'id': id
                     }).then(function (response) {
-                        me.listarMunicipio(1,'', 'nombre');
+                        me.listarRed(1,'', 'nombre');
                          swalWithBootstrapButtons.fire(
                             'Activado!',
                             'El registro ha sido activado con éxito.',
@@ -359,14 +329,14 @@
                 }
                 })
             },
-            validarMunicipio(){
-                this.errorMunicipio=0;
-                this.errorMostrarMsjMunicipio=[];
+            validarRed(){
+                this.errorRed=0;
+                this.errorMostrarMsjRed=[];
 
-                if(!this.nombre)this.errorMostrarMsjMunicipio.push("El nombre del Municipio no puede estar vacio");
+                if(!this.nombre)this.errorMostrarMsjRed.push("El nombre de la Red Social no puede estar vacio");
 
-                if(this.errorMostrarMsjMunicipio.length) this.errorMunicipio=1;
-                return this.errorMunicipio;
+                if(this.errorMostrarMsjRed.length) this.errorRed=1;
+                return this.errorRed;
             },
             cerrarModal() {
                 this.modal=0;
@@ -375,16 +345,15 @@
             },
             abrirModal(modelo, accion, data=[]){
                 switch(modelo){
-                    case "municipio":
+                    case "red":
                     {
                         switch(accion)
                         {
                             case 'registrar':
                             {
                                 this.modal = 1;
-                                this.tituloModal = 'Registrar Municipio';
+                                this.tituloModal = 'Registrar Red Social';
                                 this.nombre = '';
-                                this.idDepartamento=0;
                                 this.tipoAccion= 1;
                                 break;
                             }
@@ -392,20 +361,19 @@
                             {
                                 //console.log(data);    
                                 this.modal=1;
-                                this.tituloModal='Actualizar municipio';
+                                this.tituloModal='Actualizar Red Social';
                                 this.tipoAccion=2;
                                 this.nombre=data['nombre'];
-                                this.municipio_id=data['id'];
-                                this.idDepartamento=data['idDepartamento'];
+                                this.red_id=data['id'];
+
                             }
                         }
                     }
-                }                
-                this.selectDepartamento();
+                }
             }
         },
         mounted() {
-            this.listarMunicipio(1,this.buscar,this.criterio);
+            this.listarRed(1,this.buscar,this.criterio);
         }
     }
 </script>

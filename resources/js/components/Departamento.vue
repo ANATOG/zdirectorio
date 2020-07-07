@@ -249,7 +249,7 @@
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Está seguro de desactivar estde departamento?',
+                title: 'Está seguro de desactivar este departamento?',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Aceptar',
