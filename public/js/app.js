@@ -45323,6 +45323,589 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tarjeta.vue?vue&type=template&id=2f84d112&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/tarjeta.vue?vue&type=template&id=2f84d112& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "container text-center" }, [
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "article",
+          { staticClass: "card", staticStyle: { width: "20rem" } },
+          [
+            _c("svg", { staticClass: "fondocard" }),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _vm._m(1)
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade bd-example-modal-xl",
+        attrs: {
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "myExtraLargeModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c("div", { staticClass: "modal-dialog modal-xl" }, [
+          _c("div", { staticClass: "modal-content" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c("main", { staticClass: "container" }, [
+                _c("div", [_c("svg", { staticClass: "fondoatras" })]),
+                _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _vm._m(5),
+                _vm._v(" "),
+                _vm._m(6)
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(7)
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "fotografiaredonda" }, [
+      _c("img", {
+        staticClass: "roundfoto",
+        attrs: {
+          src:
+            "https://www.incp.org.co/wp-content/uploads/2018/09/Director-DIAN-500x445.jpg",
+          "data-toggle": "modal",
+          "data-target": ".bd-example-modal-xl",
+          alt: "fotografía"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-body" }, [
+      _c("div", [
+        _c("h5", { staticClass: "card-title" }, [_vm._v("Edson Esteban ")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "card-text" }, [_vm._v("Ingeniero en Sistemas")])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: " row justify-content-center justify-content-md-start "
+        },
+        [
+          _c("div", { staticClass: "dropdown" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-default btn-circle btn-xl  dropdown",
+                attrs: {
+                  role: "button",
+                  id: "dropdownMenuLink",
+                  "data-toggle": "dropdown",
+                  "aria-haspopup": "true",
+                  "aria-expanded": "false"
+                }
+              },
+              [
+                _c("span", {
+                  staticClass: "fas fa-share-alt",
+                  attrs: { id: "icolor" }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "dropdown-menu",
+                attrs: { "aria-labelledby": "dropdownMenuLink" }
+              },
+              [
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [
+                    _c("span", {
+                      staticClass: "fab fa-facebook-f",
+                      attrs: { id: "icolor" }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [
+                    _c("span", {
+                      staticClass: "fab fa-twitter",
+                      attrs: { id: "icolor" }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticClass: "dropdown-item", attrs: { href: "#" } },
+                  [
+                    _c("span", {
+                      staticClass: "fab fa-linkedin-in",
+                      attrs: { id: "icolor" }
+                    })
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "btn btn-default btn-circle btn-xl" }, [
+            _c("a", { attrs: { href: "#", role: "button" } }, [
+              _c("span", {
+                staticClass: "fas fa-map-marker-alt",
+                attrs: { id: "icolor" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "btn btn-default btn-circle btn-xl" }, [
+            _c("a", { attrs: { href: "#", role: "button" } }, [
+              _c("span", {
+                staticClass: "fas fa-phone-volume",
+                attrs: { id: "icolor" }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "btn btn-default btn-circle btn-xl" }, [
+            _c("a", { attrs: { href: "#", role: "button" } }, [
+              _c("span", {
+                staticClass: "fab fa-whatsapp",
+                attrs: { id: "icolor" }
+              })
+            ])
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "exampleModalLabel" } },
+        [_vm._v("Empresa Profesional")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "fotografiaredondap" }, [
+        _c("img", {
+          staticClass: "roundfotop",
+          attrs: {
+            src:
+              "https://www.incp.org.co/wp-content/uploads/2018/09/Director-DIAN-500x445.jpg",
+            alt: "fotografía"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "infop" }, [
+        _c("div", { staticClass: "nombreP" }, [
+          _c("h3", [_vm._v("Edson Esteban ")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tituloP" }, [
+          _c("p", [_vm._v("Ingeniero en Sistemas")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              " row justify-content-center justify-content-md-start iconos"
+          },
+          [
+            _c("div", { staticClass: "dropdown" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-default btn-circlep btn-xlp  dropdown",
+                  attrs: {
+                    role: "button",
+                    id: "dropdownMenuLink",
+                    "data-toggle": "dropdown",
+                    "aria-haspopup": "true",
+                    "aria-expanded": "false"
+                  }
+                },
+                [
+                  _c("span", {
+                    staticClass: "fas fa-share-alt",
+                    attrs: { id: "icolorp" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "dropdown-menu",
+                  attrs: { "aria-labelledby": "dropdownMenuLink" }
+                },
+                [
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [
+                      _c("span", {
+                        staticClass: "fab fa-facebook-f",
+                        attrs: { id: "icolorp" }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [
+                      _c("span", {
+                        staticClass: "fab fa-twitter",
+                        attrs: { id: "icolorp" }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [
+                      _c("span", {
+                        staticClass: "fab fa-linkedin-in",
+                        attrs: { id: "icolorp" }
+                      })
+                    ]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "btn btn-default btn-circlep btn-xlp" }, [
+              _c("a", { attrs: { href: "#", role: "button" } }, [
+                _c("span", {
+                  staticClass: "fas fa-map-marker-alt",
+                  attrs: { id: "icolorp" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "btn btn-default btn-circlep btn-xlp" }, [
+              _c("a", { attrs: { href: "#", role: "button" } }, [
+                _c("span", {
+                  staticClass: "fas fa-phone-volume",
+                  attrs: { id: "icolorp" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "btn btn-default btn-circlep btn-xlp" }, [
+              _c("a", { attrs: { href: "#", role: "button" } }, [
+                _c("span", {
+                  staticClass: "fab fa-whatsapp",
+                  attrs: { id: "icolorp" }
+                })
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container informacionp" }, [
+      _c("div", { staticClass: "card text-center" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _c("ul", { staticClass: "nav nav-tabs card-header-tabs" }, [
+            _c("li", { staticClass: "nav-item" }, [
+              _c(
+                "a",
+                { staticClass: "nav-link active", attrs: { href: "#" } },
+                [_vm._v("Servicios")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                _vm._v("Experiencia")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
+                _vm._v("Biografía")
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("h5", { staticClass: "card-title" }, [
+            _vm._v("Special title treatment")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "With supporting text below as a natural lead-in to additional content."
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container contactop" }, [
+      _c(
+        "div",
+        {
+          staticClass: "z-depth-1-half map-container",
+          attrs: { id: "map-container-google-1" }
+        },
+        [
+          _c("iframe", {
+            staticStyle: { border: "0" },
+            attrs: {
+              src:
+                "https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed",
+              frameborder: "0",
+              allowfullscreen: ""
+            }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _vm._v(
+            "\n                                   Contacto\n                               "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("blockquote", { staticClass: "blockquote mb-0" }, [
+            _c("a", [
+              _c("h3", [
+                _c("span", { staticClass: "far fa-clock " }),
+                _vm._v(" Horario de atencion")
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("8:00am a 6:pm")])
+            ]),
+            _vm._v(" "),
+            _c("a", [
+              _c("h3", [
+                _c("span", { staticClass: "fas fa-envelope" }),
+                _vm._v(" Correo Electronico")
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                { attrs: { href: "mailto:edsoncipriano810@gmail.com" } },
+                [_vm._v(" edsoncipriano810@gmail.com")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", [
+              _c("h3", [
+                _c("span", { staticClass: "fas fa-phone" }),
+                _vm._v(" Teléfonos")
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "tel:7765-0501" } }, [
+                _vm._v(" 7765-0501")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("a", [
+              _c("h3", [
+                _c("span", { staticClass: "fas fa-globe-americas" }),
+                _vm._v(" Sitio Web")
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  attrs: { href: "https://www.zetamarketingconsultores.com/" }
+                },
+                [
+                  _vm._v(
+                    "https://www.zetamarketingconsultores.com/\n                                           "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", [
+              _c("h3", [
+                _c("span", { staticClass: "fas fa-share-alt" }),
+                _vm._v(" Redes Sociales")
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "fb-ic",
+                  attrs: {
+                    href: "https://www.facebook.com/OtorrinOnline.gt/?fref=ts",
+                    target: "_blank"
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass:
+                      "fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-1x"
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("a", { staticClass: "tw-ic" }, [
+                _c("i", {
+                  staticClass:
+                    "fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1x"
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "gplus-ic" }, [
+                _c("i", {
+                  staticClass:
+                    "fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-1x"
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "li-ic" }, [
+                _c("i", {
+                  staticClass:
+                    "fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-1x"
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "ins-ic" }, [
+                _c("i", {
+                  staticClass:
+                    "fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-1x"
+                })
+              ]),
+              _vm._v(" "),
+              _c("a", { staticClass: "pin-ic" }, [
+                _c("i", {
+                  staticClass: "fab fa-pinterest fa-lg white-text fa-1x"
+                })
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-secondary",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_vm._v("Cerrar")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        [_vm._v("Enviar")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -57511,7 +58094,8 @@ Vue.component('departamento', __webpack_require__(/*! ./components/Departamento.
 Vue.component('municipio', __webpack_require__(/*! ./components/Municipio.vue */ "./resources/js/components/Municipio.vue")["default"]);
 Vue.component('red', __webpack_require__(/*! ./components/Red.vue */ "./resources/js/components/Red.vue")["default"]);
 Vue.component('tipo', __webpack_require__(/*! ./components/Tipo.vue */ "./resources/js/components/Tipo.vue")["default"]);
-Vue.component('persona', __webpack_require__(/*! ./components/Persona.vue */ "./resources/js/components/Persona.vue")["default"]); //Vue.component('persona', require('./components/wizard.vue').default);
+Vue.component('persona', __webpack_require__(/*! ./components/Persona.vue */ "./resources/js/components/Persona.vue")["default"]);
+Vue.component('tarjeta', __webpack_require__(/*! ./components/tarjeta.vue */ "./resources/js/components/tarjeta.vue")["default"]); //Vue.component('persona', require('./components/wizard.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -58089,6 +58673,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tipo_vue_vue_type_template_id_2d79101f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Tipo_vue_vue_type_template_id_2d79101f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/tarjeta.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/tarjeta.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _tarjeta_vue_vue_type_template_id_2f84d112___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tarjeta.vue?vue&type=template&id=2f84d112& */ "./resources/js/components/tarjeta.vue?vue&type=template&id=2f84d112&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _tarjeta_vue_vue_type_template_id_2f84d112___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _tarjeta_vue_vue_type_template_id_2f84d112___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/tarjeta.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/tarjeta.vue?vue&type=template&id=2f84d112&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/tarjeta.vue?vue&type=template&id=2f84d112& ***!
+  \****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tarjeta_vue_vue_type_template_id_2f84d112___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./tarjeta.vue?vue&type=template&id=2f84d112& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tarjeta.vue?vue&type=template&id=2f84d112&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tarjeta_vue_vue_type_template_id_2f84d112___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_tarjeta_vue_vue_type_template_id_2f84d112___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

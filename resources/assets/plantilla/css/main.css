@@ -1,13 +1,14 @@
-*,*:after, *:before{
-    margin:0;
-    padding:0;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box
-
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
 }
 
-#contenedor_carga{
+#contenedor_carga {
     background-color: rgb(250, 240, 245, 0.9);
     height: 100%;
     width: 100%;
@@ -17,14 +18,13 @@
     z-index: 10000;
 }
 
-#carga{
+#carga {
     border: 5px solid #ccc;
     border-top-color: #F4266A;
     border-top-style: groove;
     height: 100px;
     width: 100px;
     border-radius: 100%;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -34,111 +34,102 @@
     -webkit-animation: girar 1.5s linear infinite;
     -o-animation: girar 1.5s linear infinite;
     animation: girar 1.5s linear infinite;
-
 }
 
-@keyframes girar{
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.fotografiaredonda{
-   
+.fotografiaredonda {
     margin-top: -120px;
-    margin-left: -px;
 }
 
-
-.navbar{
-    position:fixed;
-    z-index:1001;
-    width:100%;
+.navbar {
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
 }
-.roundfoto{
+
+.roundfoto {
     text-align: center;
     width: 180px;
-     height: 180px;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     border-color: white;
-     border-width: 5px;
+    height: 180px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 5px;
     border-style: solid;
-    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-}  
-.fondocard{
-    background: #197ca6;
-    
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
 }
 
+.fondocard {
+    background: #197ca6;
+}
 
 .btn-circlep.btn-xlp {
     width: 50px;
     height: 50px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     border-radius: 40px;
     font-size: 18px;
     line-height: center;
     border-color: #343434;
-     border-width: 2px;
+    border-width: 2px;
     border-style: solid;
-    margin-left: 30px;
-  
-    
-  
-   
+    margin-left: 1px;
 }
 
-#icolorp{
-    color : #343434;
-    margin-top:auto;
+#icolorp {
+    color: #343434;
+    margin-top: auto;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    
-} 
+}
 
-
-
-
-.roundfotop{
+.roundfotop {
     text-align: center;
     width: 250px;
-     height: 250px;
-     -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
-     border-radius: 50%;
-     border-color: white;
-     border-width: 5px;
+    height: 250px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 5px;
     border-style: solid;
-    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-}  
-.fotografiaredondap{
-   margin-left: auto;
-   margin-right: auto;
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+}
+
+.fotografiaredondap {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: -100px;
-   
-  
-   
 }
 
-.nombreP{
-    margin-left: 30px;
-    text-align: center;
-}
-.tituloP{
+.nombreP {
     margin-left: 30px;
     text-align: center;
 }
 
-.infop{
+.tituloP {
+    margin-left: 30px;
+    text-align: center;
+}
+
+.infop {
     margin-top: auto;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
 }
 
 .btn-circle.btn-xl {
@@ -149,55 +140,63 @@
     font-size: 18px;
     line-height: center;
     border-color: #343434;
-     border-width: 2px;
+    border-width: 2px;
     border-style: solid;
     margin-left: auto;
-  
-    
-
-   
 }
-#icolor{
-    color : #343434;
-    margin-top:auto;
+
+#icolor {
+    color: #343434;
+    margin-top: auto;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    
-} 
+}
 
-
-.card{
-    
-    -webkit-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 7px -2px rgba(0,0,0,0.75);
-    
-    
+.card {
+    -webkit-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px -2px rgba(0, 0, 0, 0.75);
+    border-radius: 11px;
 }
 
 .footer {
-    background-image: url("https://i.stack.imgur.com/AZ2Xw.png");
+    background-color: #29363d;
     background-position: center center;
     background-repeat: no-repeat;
     position: absolute;
-    margin-top: 580px;
+    margin-top: 100px;
     width: 100%;
-    height: 300px; /* Set the fixed height of the footer here */
-    }
+    height: 250px;
+    /* Set the fixed height of the footer here */
+}
 
-    .map-container{
-        overflow:hidden;
-        padding-bottom:56.25%;
-        position:relative;
-        height:0;
-        margin-top: 20px;
-        }
-    .map-container iframe{
-        left:0;
-        top:0;
-        height:75%;
-        width:100%;
-        position:absolute;
-        
-        }
+.map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 75%;
+    width: 100%;
+    position: absolute;
+}
+
+.modal-xl {
+    max-width: 80% !important;
+}
+
+.buscador {
+    border-radius: 11px !important;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 1001;
+}
