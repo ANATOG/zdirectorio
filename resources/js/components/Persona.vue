@@ -312,7 +312,7 @@
                                                                 <i class="icon-close"></i>
                                                             </button>
                                                         </td>
-                                                        <td v-text="contacto.nombre" >
+                                                        <td v-text="contacto.nombrecon" >
                                                         </td>
                                                         <td>
                                                             <input v-model="contacto.contacto" type="text" class="form-control">
@@ -555,7 +555,7 @@
                 me.arrayContacto.push({
                     idTipo:me.idTipo,
                     contacto:me.contacto,
-                    nombre:me.nombrecon,
+                    nombrecon:me.nombrecon,
                     detallec:me.detallec
                 });
             },
