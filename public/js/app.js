@@ -3484,11 +3484,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      nombrecont: undefined,
       step: 1,
       persona_id: 0,
       nombres: '',
@@ -3603,12 +3610,19 @@ __webpack_require__.r(__webpack_exports__);
     },
     agregarContacto: function agregarContacto() {
       var me = this;
-      me.arrayContacto.push({
-        idTipo: me.idTipo,
-        contacto: me.contacto,
-        nombrecon: me.nombrecon,
-        detallec: me.detallec
-      });
+
+      if (me.idTipo == 0 || me.nombrecon == '' || me.detallec == '' || me.contacto == '') {} else {
+        me.arrayContacto.push({
+          idTipo: me.idTipo,
+          contacto: me.contacto,
+          nombrecon: me.nombrecon,
+          detallec: me.detallec
+        });
+        me.idTipo = 0;
+        me.contacto = '';
+        me.nombrecon = '';
+        me.detallec = '';
+      }
     },
     prev: function prev() {
       this.step--;
@@ -44091,7 +44105,26 @@ var render = function() {
                                   staticClass: "col-md-12 form-control-label",
                                   attrs: { for: "" }
                                 },
-                                [_vm._v("Tipo de contacto*")]
+                                [
+                                  _vm._v(
+                                    "Tipo*\n                                            "
+                                  ),
+                                  _c(
+                                    "span",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: _vm.idTipo == "",
+                                          expression: "idTipo==''"
+                                        }
+                                      ],
+                                      staticStyle: { color: "red" }
+                                    },
+                                    [_vm._v(" (Seleccione)")]
+                                  )
+                                ]
                               ),
                               _vm._v(" "),
                               _c(
@@ -44125,7 +44158,26 @@ var render = function() {
                                   staticClass: "col-md-12 form-control-label",
                                   attrs: { for: "text-input" }
                                 },
-                                [_vm._v("Contacto*")]
+                                [
+                                  _vm._v(
+                                    "Contacto*\n                                            "
+                                  ),
+                                  _c(
+                                    "span",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: _vm.contacto == "",
+                                          expression: "contacto==''"
+                                        }
+                                      ],
+                                      staticStyle: { color: "red" }
+                                    },
+                                    [_vm._v(" (Ingrese)")]
+                                  )
+                                ]
                               ),
                               _vm._v(" "),
                               _c("div", { staticClass: "col-md-12" }, [
@@ -44164,7 +44216,26 @@ var render = function() {
                                   staticClass: "col-md-12 form-control-label",
                                   attrs: { for: "text-input" }
                                 },
-                                [_vm._v("Detalle")]
+                                [
+                                  _vm._v(
+                                    "Detalle\n                                            "
+                                  ),
+                                  _c(
+                                    "span",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: _vm.detallec == "",
+                                          expression: "detallec==''"
+                                        }
+                                      ],
+                                      staticStyle: { color: "red" }
+                                    },
+                                    [_vm._v(" (Ingrese)")]
+                                  )
+                                ]
                               ),
                               _vm._v(" "),
                               _c("div", { staticClass: "col-md-12" }, [

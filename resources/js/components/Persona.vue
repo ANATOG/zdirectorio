@@ -265,7 +265,9 @@
                                     <hr>
                                     <div class="form-group row border">
                                         <div class="form-group col-md-3">
-                                            <label class="col-md-12 form-control-label" for="">Tipo de contacto*</label>
+                                            <label class="col-md-12 form-control-label" for="">Tipo*
+                                                <span style="color:red" v-show="idTipo==''"> (Seleccione)</span>
+                                            </label>
                                             <div class="col-md-12">
                                                 <v-select
                                                     v-model: nombrecont
@@ -279,20 +281,24 @@
                                             </div>                              
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label class="col-md-12 form-control-label" for="text-input">Contacto*</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Contacto*
+                                                <span style="color:red" v-show="contacto==''"> (Ingrese)</span>
+                                            </label>
                                             <div class="col-md-12">
                                                 <input type="text" v-model="contacto" class="form-control" placeholder="Ingrese la dirección/teléfono etc.">                                        
                                             </div>                           
                                         </div>
                                          <div class="form-group col-md-4">
-                                            <label class="col-md-12 form-control-label" for="text-input">Detalle</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Detalle
+                                                <span style="color:red" v-show="detallec==''"> (Ingrese)</span>
+                                            </label>
                                             <div class="col-md-12">
                                                 <input type="text" v-model="detallec" class="form-control" placeholder="Detalle de contacto (opcional)">                                        
                                             </div>
                                         </div> 
                                         <div class="form-group col-md-1">
                                             <button @click.prevent="agregarContacto()" class="btn btn-primary form-control btnagregar"><i class="icon-plus"></i></button>
-                                        </div>
+                                        </div>                                        
                                     </div>
                                     <div class="form-group row border">
                                         <div class="table-responsive col-md-12">
@@ -438,6 +444,7 @@
     export default {
         data (){
             return {
+                nombrecont:undefined,
                 step:1,
                 persona_id : 0,
                 nombres : '',
@@ -552,12 +559,22 @@
             },
             agregarContacto(){
                 let me=this;
-                me.arrayContacto.push({
-                    idTipo:me.idTipo,
-                    contacto:me.contacto,
-                    nombrecon:me.nombrecon,
-                    detallec:me.detallec
-                });
+                if(me.idTipo==0 || me.nombrecon=='' || me.detallec=='' || me.contacto==''){
+
+                }
+                else{
+                    me.arrayContacto.push({
+                        idTipo:me.idTipo,
+                        contacto:me.contacto,
+                        nombrecon:me.nombrecon,
+                        detallec:me.detallec
+                    });
+                    me.idTipo=0;
+                    me.contacto='';
+                    me.nombrecon='';
+                    me.detallec='';
+                }
+                
             },
             prev() {
             this.step--;
