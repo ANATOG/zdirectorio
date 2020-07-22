@@ -35,5 +35,6 @@
         <template v-if="menu==8">
         <h1>Configuracion</h1>          
         </template>
+
         
     @endsection

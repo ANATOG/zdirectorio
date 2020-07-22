@@ -30,65 +30,70 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-bordered table-striped table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Opciones</th>                                    
-                                    <th>Titulo</th>
-                                    <th>Nombres</th>
-                                    <th>Apellidos</th>
-                                    <th>Profesion</th>
-                                    <th>Colegiado</th>
-                                    <th>Categoria</th>
-                                    <th>Preferencia</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="persona in arrayPersona" :key="persona.id">
-                                    <td>
-                                        <button type="button" class="btn btn-warning btn-sm"  @click="abrirModal('persona','actualizar',persona)" >
-                                          <i class="icon-pencil"></i>
-                                        </button> &nbsp;
-                                        <template v-if="persona.condicion">
-                                            <button type="button" class="btn btn-danger btn-sm" @click="desactivarPersona(persona.id)">
-                                                <i class="icon-trash"></i>
-                                            </button>
-                                        </template>
-                                        <template v-else>
-                                            <button type="button" class="btn btn-success btn-sm" @click="activarPersona(persona.id)">
-                                                <i class="icon-check"></i>
-                                            </button>
-                                        </template>
-                                    </td>
-                                    <td v-text="persona.titulo"></td>
-                                    <td v-text="persona.nombres"></td>
-                                    <td v-text="persona.apellidos"></td>                                    
-                                    <td v-text="persona.profesion"></td>
-                                    <td v-text="persona.colegiado"></td>
-                                    <td v-text="persona.categoria"></td>
-                                    <td>
-                                        <div v-if="persona.preferencia=='n'">
-                                            <span class="badge badge-success">Normal</span>
-                                        </div>
-                                        <div v-else>
-                                            <span class="badge badge-primary">Premium</span>
-                                        </div>
-                                        
-                                    </td>
-                                    <td>
-                                        <div v-if="persona.condicion">
-                                            <span class="badge badge-success">Activo</span>
-                                        </div>
-                                        <div v-else>
-                                            <span class="badge badge-danger">Inactivo</span>
-                                        </div>
-                                        
-                                    </td>
-                                </tr>           
-                               
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Opciones</th>                                    
+                                        <th>Titulo</th>
+                                        <th>Nombres</th>
+                                        <th>Apellidos</th>
+                                        <th>Profesion</th>
+                                        <th>Colegiado</th>
+                                        <th>Categoria</th>
+                                        <th>Preferencia</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="persona in arrayPersona" :key="persona.id">
+                                        <td>
+                                            <button type="button" class="btn btn-success btn-sm"  @click="abrirModal('persona','actualizar',persona)" >
+                                            <i class="icon-eye"></i>
+                                            </button> &nbsp;
+                                            <button type="button" class="btn btn-warning btn-sm"  @click="abrirModal('persona','actualizar',persona)" >
+                                            <i class="icon-pencil"></i>
+                                            </button> &nbsp;
+                                            <template v-if="persona.condicion">
+                                                <button type="button" class="btn btn-danger btn-sm" @click="desactivarPersona(persona.id)">
+                                                    <i class="icon-trash"></i>
+                                                </button>
+                                            </template>
+                                            <template v-else>
+                                                <button type="button" class="btn btn-success btn-sm" @click="activarPersona(persona.id)">
+                                                    <i class="icon-check"></i>
+                                                </button>
+                                            </template>
+                                        </td>
+                                        <td v-text="persona.titulo"></td>
+                                        <td v-text="persona.nombres"></td>
+                                        <td v-text="persona.apellidos"></td>                                    
+                                        <td v-text="persona.profesion"></td>
+                                        <td v-text="persona.colegiado"></td>
+                                        <td v-text="persona.categoria"></td>
+                                        <td>
+                                            <div v-if="persona.preferencia=='n'">
+                                                <span class="badge badge-success">Normal</span>
+                                            </div>
+                                            <div v-else>
+                                                <span class="badge badge-primary">Premium</span>
+                                            </div>
+                                            
+                                        </td>
+                                        <td>
+                                            <div v-if="persona.condicion">
+                                                <span class="badge badge-success">Activo</span>
+                                            </div>
+                                            <div v-else>
+                                                <span class="badge badge-danger">Inactivo</span>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>           
+                                
+                                </tbody>
+                            </table>
+                        </div>
                         <nav>
                             <ul class="pagination">
                                 <li class="page-item" v-if="pagination.current_page > 1">
@@ -108,102 +113,6 @@
                 <!-- Fin ejemplo de tabla Listado -->
             </div>
 
-
-            <!--Inicio del modal agregar/actualizar PASO 1. INFORMACION PERSONAL
-            <div class="modal fade"  tabindex="-1" :class="{'mostrar' : modal}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-primary modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" v-text="tituloModal"></h4>
-                            <button type="button" class="close" @click="cerrarModal()" aria-label="Close">
-                              <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Preferencia</label>
-                                    <div class="col-md-9">
-                                        <select class="form-control" v-model="preferencia">
-                                            <option disabled value="">Seleccione</option>
-                                            <option value="n" >Normal</option>
-                                            <option value="p" >Premium</option>                                            
-                                        </select>
-                                    </div>
-                                </div>
-                                 <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Categoria</label>
-                                    <div class="col-md-9">
-                                        <select class="form-control" v-model="idCategoria">
-                                            <option value="0" disabled>Seleccione</option>
-                                            <option v-for="categoria in arrayCategoria" :key="categoria.id" :value="categoria.id" v-text="categoria.nombre"></option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Titulo</label>
-                                    <div class="col-md-9">
-                                        <input type="text" v-model="titulo" class="form-control" placeholder="Titulo">                                        
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Nombres</label>
-                                    <div class="col-md-9">
-                                        <input type="text" v-model="nombres" class="form-control" placeholder="Nombre">                                        
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Apellidos</label>
-                                    <div class="col-md-9">
-                                        <input type="text" v-model="apellidos" class="form-control" placeholder="Apellidos">                                        
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Profesion</label>
-                                    <div class="col-md-9">
-                                        <input type="text" v-model="profesion" class="form-control" placeholder="Profesion">                                        
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Colegiado</label>
-                                    <div class="col-md-9">
-                                        <input type="text" v-model="colegiado" class="form-control" placeholder="Colegiado">                                        
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Biografia</label>
-                                    <div class="col-md-9">
-                                        <textarea v-model="biografia" class="md-textarea form-control" rows="3"></textarea>                                        
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 form-control-label" for="text-input">Experiencia</label>
-                                    <div class="col-md-9">
-                                        <textarea v-model="experiencia" class="md-textarea form-control" rows="3"></textarea>                                        
-                                    </div>
-                                </div>                               
-                                
-                                <div v-show="errorPersona" class="form-group row div-error">
-                                    <div class="text-center text-error">
-                                        <div v-for="error in errorMostrarMsjPersona" :key="error" v-text="error"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" @click="cerrarModal()" >Cerrar</button>
-                            <button type="button" v-if="tipoAccion==1" class="btn btn-primary" @click="registrarPersona()">Guardar</button>
-                            <button type="button" v-if="tipoAccion==2" class="btn btn-primary" @click="actualizarPersona()" >Actualizar</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            <!--</div>--> 
-            <!--Fin del modal-->  
-
-
-
             <!--Inicio del modal agregar/actualizar PASO 1. INFORMACION PERSONAL-->
             <div class="modal fade"  tabindex="-1" :class="{'mostrar' : modal}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" aria-hidden="true">
                 <div class="modal-dialog modal-primary modal-lg" role="document">
@@ -216,12 +125,13 @@
                         </div>
                         <div class="modal-body">
                             <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                <!-- Paso 1. Personal -->
                                 <div v-if="step === 1">
                                     <h5>Paso 1. Información personal</h5>
                                     <hr>
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
-                                            <label class="col-md-12 form-control-label" for="text-input">Preferencia</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Preferencia*</label>
                                             <div class="col-md-12">
                                                 <select class="form-control" v-model="preferencia">
                                                     <option disabled value="">Seleccione</option>
@@ -231,7 +141,7 @@
                                             </div>                               
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label class="col-md-12 form-control-label" for="text-input">Categoria</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Categoria*</label>
                                             <div class="col-md-12">
                                                 <select class="form-control" v-model="idCategoria">
                                                     <option value="0" disabled>Seleccione</option>
@@ -249,13 +159,13 @@
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label class="col-md-12 form-control-label" for="text-input">Nombres</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Nombres*</label>
                                             <div class="col-md-12">
                                                 <input type="text" v-model="nombres" class="form-control" placeholder="Nombre">                                        
                                             </div>                           
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label class="col-md-12 form-control-label" for="text-input">Apellidos</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Apellidos*</label>
                                             <div class="col-md-12">
                                                 <input type="text" v-model="apellidos" class="form-control" placeholder="Apellidos">                                        
                                             </div>
@@ -297,8 +207,9 @@
                                             <div v-for="error in errorMostrarMsjPersona" :key="error" v-text="error"></div>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary" @click.prevent="next()">Siguente</button>
+                                    <button class="btn btn-primary" @click.prevent="paso1()">Siguente</button>
                                 </div>
+                                <!-- Fin Paso 1. -->
 
                                 <!-- Paso 2. Dirección -->
                                 <div v-if="step === 2">
@@ -306,28 +217,27 @@
                                     <hr>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label class="col-md-12 form-control-label" for="text-input">Departamento</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Departamento*</label>
                                             <div class="col-md-12">
-                                                <select class="form-control" v-model="idDepartamento">
-                                                    <option disabled value="">Seleccione</option>
-                                                    <option value="n" >Normal</option>
-                                                    <option value="p" >Premium</option>                                            
+                                                <select class="form-control" v-model="idDepartamento" @change="onChange()">
+                                                    <option value="0" disabled>Seleccione</option>
+                                                    <option v-for="departamento in arrayDepartamento" :key="departamento.id" :value="departamento.id" v-text="departamento.nombre"></option>                                           
                                                 </select>
                                             </div>                               
-                                        </div>
+                                        </div>  
                                         <div class="form-group col-md-6">
-                                            <label class="col-md-12 form-control-label" for="text-input">Municipio</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Municipio*</label>
                                             <div class="col-md-12">
                                                 <select class="form-control" v-model="idMunicipio">
                                                     <option value="0" disabled>Seleccione</option>
-                                                    <option v-for="categoria in arrayCategoria" :key="categoria.id" :value="categoria.id" v-text="categoria.nombre"></option>
+                                                    <option v-for="municipio in arrayMunicipio" :key="municipio.id" :value="municipio.id" v-text="municipio.nombre"></option>                                           
                                                 </select>
-                                            </div>
+                                            </div>                               
                                         </div>                               
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label class="col-md-12 form-control-label" for="text-input">Linea 1</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Linea 1*</label>
                                             <div class="col-md-12">
                                                 <input type="text" v-model="linea1" class="form-control" placeholder="Detalle de direccion">                                        
                                             </div>                           
@@ -346,37 +256,84 @@
                                         </div>
                                     </div>
                                     <button class="btn btn-warning" @click.prevent="prev()">Previo</button>                                    
-                                    <button class="btn btn-primary" @click.prevent="next()">Siguiente</button>                                    
+                                    <button class="btn btn-primary" @click.prevent="paso2()">Siguiente</button>                                    
                                 </div>
                                 
                                 <!-- Paso 3. Contacto-->
                                 <div v-if="step === 3">
                                     <h5>Paso 3. Información de contacto</h5>
                                     <hr>
-                                    <div class="form-row">                                   
-                                        <div class="form-group col-md-4">
-                                            <label class="col-md-12 form-control-label" for="text-input">Tipo de contacto</label>
+                                    <div class="form-group row border">
+                                        <div class="form-group col-md-3">
+                                            <label class="col-md-12 form-control-label" for="">Tipo de contacto*</label>
                                             <div class="col-md-12">
-                                                <select class="form-control" v-model="idTipo">
-                                                    <option disabled value="">Seleccione</option>
-                                                    <option value="n" >Normal</option>
-                                                    <option value="p" >Premium</option>                                            
-                                                </select>
-                                            </div>                               
+                                                <v-select
+                                                    v-model: nombrecont
+                                                    @search="selectTipo"
+                                                    label="nombre"
+                                                    :options="arrayTipo"
+                                                    placeholder="Buscar..."
+                                                    @input="getDatosTipo"
+                                                >      
+                                                </v-select>
+                                            </div>                              
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label class="col-md-12 form-control-label" for="text-input">Contacto</label>
+                                            <label class="col-md-12 form-control-label" for="text-input">Contacto*</label>
                                             <div class="col-md-12">
                                                 <input type="text" v-model="contacto" class="form-control" placeholder="Ingrese la dirección/teléfono etc.">                                        
                                             </div>                           
                                         </div>
-                                        <div class="form-group col-md-4">
+                                         <div class="form-group col-md-4">
                                             <label class="col-md-12 form-control-label" for="text-input">Detalle</label>
                                             <div class="col-md-12">
                                                 <input type="text" v-model="detallec" class="form-control" placeholder="Detalle de contacto (opcional)">                                        
                                             </div>
-                                        </div>                              
+                                        </div> 
+                                        <div class="form-group col-md-1">
+                                            <button @click="agregarContacto()" class="btn btn-primary form-control btnagregar"><i class="icon-plus"></i></button>
+                                        </div>
                                     </div>
+                                    <div class="form-group row border">
+                                        <div class="table-responsive col-md-12">
+                                            <table class="table table-bordered table-striped table-sm">
+                                                <thead>
+                                                    <tr style="background-color: #CEECF5">
+                                                        <th>Opciones</th>
+                                                        <th>Tipo</th>
+                                                        <th>Contacto</th>
+                                                        <th>Detalle</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody v-if="arrayContacto.length">
+                                                    <tr v-for="contacto in arrayContacto" :key="contacto.id" >
+                                                        <td>
+                                                            <button type="button" class="btn btn-danger btn-sm">
+                                                                <i class="icon-close"></i>
+                                                            </button>
+                                                        </td>
+                                                        <td v-text="contacto.idTipo" >
+                                                        </td>
+                                                        <td>
+                                                            <input v-model="contacto.contacto" type="text" class="form-control">
+                                                        </td>
+                                                        <td>
+                                                            <input v-model="contacto.detallec" type="text" class="form-control">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+
+                                                <tbody v-else>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            Aún no ha ingresado ningun contacto
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
                                     <button class="btn btn-warning" @click.prevent="prev()">Previo</button>                                    
                                     <button class="btn btn-primary" @click.prevent="next()">Siguiente</button>
                                 </div>
@@ -476,6 +433,8 @@
 </template>
 
 <script>
+    import vSelect from "vue-select"
+    import 'vue-select/dist/vue-select.css';
     export default {
         data (){
             return {
@@ -491,6 +450,13 @@
                 preferencia : '',
                 idCategoria : 0,
 
+                arrayPersona: [],
+                arrayContacto: [],
+                arrayRed: [],
+                arrayEspecialidad: [],
+                arrayServicio: [],
+                arrayTipo: [],
+
                 idDepartamento : 0,
                 idMunicipio : 0,
                 linea1 : '',
@@ -501,12 +467,12 @@
                 idRed : 0,
                 contactor : '',
                 detaller : '',
+                nombrecon:'',
                 nombre : '',
                 detallee : '',
                 servicio : '',
                 detalles : '',
                 
-                arrayPersona : [],
                 modal : 0,
                 tituloModal : '',
                 tipoAccion : 0, 
@@ -523,8 +489,15 @@
                 offset:3,
                 criterio: 'nombres',
                 buscar: '',
-                arrayCategoria: []
+                arrayCategoria: [],
+                arrayDepartamento: [],
+                arrayMunicipio: [],
+
+                
             }
+        },
+        components:{
+            vSelect
         },
         computed:{
             isActived: function(){
@@ -554,7 +527,38 @@
                 return pagesArray;
             }
         },
-        methods : {
+        methods:{
+             selectTipo(search,loading){
+                let me=this;
+                loading(true) 
+                var url='/tipo/selectTipo?filtro='+search;
+                axios.get(url).then(function (response) {
+                    // handle success
+                    let respuesta=response.data;
+                    q:search;
+                   me.arrayTipo = respuesta.tipos;
+                   loading(false)
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                });
+            },
+            getDatosTipo(val1){
+                let me = this;
+                me.loading = true;
+                me.idTipo = val1.id;
+                me.nombrecon = val1.nombre;
+            },
+            agregarContacto(){
+                let me=this;
+                me.arrayContacto.push({
+                    idTipo:me.idTipo,
+                    contacto:me.contacto,
+                    nombre:me.nombrecon,
+                    detallec:me.detallec
+                });
+            },
             prev() {
             this.step--;
             },
@@ -563,6 +567,22 @@
             },
             submit() {
             alert('Submit to blah and show blah and etc.');      
+            },
+            onChange(value) {
+                let me  = this;
+                axios.post('/municipio/selectMunicipio',{                    
+                    'id' : this.idDepartamento
+                }).then(function (response) {
+                    var respuesta=response.data;
+                    me.arrayMunicipio = respuesta.municipios;
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });   
             },
             listarPersona(page, buscar, criterio){
                 let me=this;
@@ -587,6 +607,21 @@
                 axios.get(url).then(function (response) {
                     var respuesta=response.data;
                     me.arrayCategoria = respuesta.categorias;
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });
+            },
+            selectDepartamento(){
+                let me=this;
+                var url='/departamento/selectDepartamento';
+                axios.get(url).then(function (response) {
+                    var respuesta=response.data;
+                    me.arrayDepartamento = respuesta.departamentos;
                 })
                 .catch(function (error) {
                     // handle error
@@ -630,6 +665,22 @@
                 .then(function () {
                     // always executed
                 });               
+            },
+            paso1(){
+                let me  = this;
+                //me.next();
+               if(this.validarPaso1()){
+                    return;
+                }  
+                me.next();          
+            },
+             paso2(){
+                let me  = this;
+                //me.next();
+               if(this.validarPaso2()){
+                    return;
+                }  
+                me.next();          
             },
             actualizarPersona(){
                 if(this.validarPersona()){
@@ -749,7 +800,7 @@
                 }
                 })
             },
-            validarPersona(){
+            validarPaso1(){
                 this.errorPersona=0;
                 this.errorMostrarMsjPersona=[];
 
@@ -760,6 +811,19 @@
 
                 if(this.errorMostrarMsjPersona.length) this.errorPersona=1;
                 return this.errorPersona;
+                
+            },
+             validarPaso2(){
+                this.errorPersona=0;
+                this.errorMostrarMsjPersona=[];
+
+                if(!this.idDepartamento)this.errorMostrarMsjPersona.push("El departamento no puede estar vacio");
+                if(!this.idMunicipio)this.errorMostrarMsjPersona.push("El municipio no puede estar vacio");
+                if(!this.linea1)this.errorMostrarMsjPersona.push("La línea 1 no puede estar vacio");
+
+                if(this.errorMostrarMsjPersona.length) this.errorPersona=1;
+                return this.errorPersona;
+                
             },
             cerrarModal() {
                 this.step=1,
@@ -774,6 +838,9 @@
                 this.colegiado = null,
                 this.preferencia = '',
                 this.errorPersona=0,
+                this.idMunicipio=0,
+                this.linea1='',
+                this.linea2='',
                 this.errorMostrarMsjPersona=[]
             },
             abrirModal(modelo, accion, data=[]){
@@ -796,6 +863,7 @@
                                 this.preferencia = '';
                                 this.colegiado=null;
                                 this.idCategoria = 0;
+                                this.idDepartamento = 0;
                                 this.tipoAccion= 1;
                                 break;
                             }
@@ -820,6 +888,7 @@
                     }
                 }                
                 this.selectCategoria();
+                this.selectDepartamento();
             }
         },
         mounted() {
@@ -847,5 +916,10 @@
     .text-error {
         color: red !important;
         font-weight: bold;
-    }  
+    } 
+    @media (min-width: 600px){
+        .btnagregar{
+            margin-top: 2rem;
+        }
+    } 
 </style>

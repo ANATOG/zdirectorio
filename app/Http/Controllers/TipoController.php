@@ -46,8 +46,11 @@ class TipoController extends Controller
 
     public function selectTipo(Request $request)
     {
-        if(!$request->ajax()) return redirect('/');
+      //  if(!$request->ajax()) return redirect('/');
+        $filtro =$request->filtro;
+
         $tipos= Tipo::where('condicion','=','1')
+        ->where('nombre', 'like', '%'.$filtro.'%')
         ->select('id','nombre')
         ->orderBy('nombre', 'asc')
         ->get();

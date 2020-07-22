@@ -100,4 +100,17 @@ class MunicipioController extends Controller
         $municipio->condicion ='1';
         $municipio->save(); 
     }
+ 
+    public function selectMunicipio(Request $request)
+    {
+
+        //if(!$request->ajax()) return redirect('/');
+        $municipios= Municipio::where('condicion','=','1')
+        ->where('idDepartamento','=',$request->id)
+        ->select('id','nombre')
+        ->orderBy('nombre', 'asc')
+        ->get();
+
+        return['municipios'=>$municipios];
+    }
 }
