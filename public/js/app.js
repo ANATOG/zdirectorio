@@ -3606,7 +3606,7 @@ __webpack_require__.r(__webpack_exports__);
       me.arrayContacto.push({
         idTipo: me.idTipo,
         contacto: me.contacto,
-        nombre: me.nombrecon,
+        nombrecon: me.nombrecon,
         detallec: me.detallec
       });
     },
@@ -44204,6 +44204,7 @@ var render = function() {
                                     "btn btn-primary form-control btnagregar",
                                   on: {
                                     click: function($event) {
+                                      $event.preventDefault()
                                       return _vm.agregarContacto()
                                     }
                                   }
@@ -44242,8 +44243,7 @@ var render = function() {
                                                 _c("td", {
                                                   domProps: {
                                                     textContent: _vm._s(
-                                                      contacto.idTipo +
-                                                        contacto.nombrecon
+                                                      contacto.nombrecon
                                                     )
                                                   }
                                                 }),

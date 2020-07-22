@@ -291,7 +291,7 @@
                                             </div>
                                         </div> 
                                         <div class="form-group col-md-1">
-                                            <button @click="agregarContacto()" class="btn btn-primary form-control btnagregar"><i class="icon-plus"></i></button>
+                                            <button @click.prevent="agregarContacto()" class="btn btn-primary form-control btnagregar"><i class="icon-plus"></i></button>
                                         </div>
                                     </div>
                                     <div class="form-group row border">
@@ -312,7 +312,7 @@
                                                                 <i class="icon-close"></i>
                                                             </button>
                                                         </td>
-                                                        <td v-text="contacto.contacto" >
+                                                        <td v-text="contacto.nombrecon" >
                                                         </td>
                                                         <td>
                                                             <input v-model="contacto.contacto" type="text" class="form-control">
