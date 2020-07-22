@@ -312,7 +312,7 @@
                                                                 <i class="icon-close"></i>
                                                             </button>
                                                         </td>
-                                                        <td v-text="contacto.idTipo" >
+                                                        <td v-text="contacto.nombre" >
                                                         </td>
                                                         <td>
                                                             <input v-model="contacto.contacto" type="text" class="form-control">
