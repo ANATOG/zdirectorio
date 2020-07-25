@@ -46003,7 +46003,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container text-center" }, [
     _c("div", { staticClass: "container text-center" }, [
       _c("div", { staticClass: "row" }, [
         _c(
@@ -46091,7 +46091,9 @@ var staticRenderFns = [
       _c("div", [
         _c("h5", { staticClass: "card-title" }, [_vm._v("Edson Esteban ")]),
         _vm._v(" "),
-        _c("p", { staticClass: "card-text" }, [_vm._v("Ingeniero en Sistemas")])
+        _c("p", { staticClass: "card-subtitle mb-1 text-muted" }, [
+          _vm._v("Ingeniero en Sistemas")
+        ])
       ]),
       _vm._v(" "),
       _c(
@@ -46394,6 +46396,139 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _vm._v(
+            "\n                                   Contacto\n                               "
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c("blockquote", { staticClass: "blockquote mb-0" }, [
+            _c("div", { staticClass: "row col-sm-12 col-md-4 " }, [
+              _c("a", [
+                _c("h3", [
+                  _c("span", { staticClass: "far fa-clock " }),
+                  _vm._v(" Horario de atencion")
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("8:00am a 6:pm")])
+              ]),
+              _vm._v(" "),
+              _c("a", [
+                _c("h3", [
+                  _c("span", { staticClass: "fas fa-envelope" }),
+                  _vm._v(" Correo Electronico")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { attrs: { href: "mailto:edsoncipriano810@gmail.com" } },
+                  [_vm._v(" edsoncipriano810@gmail.com")]
+                )
+              ]),
+              _vm._v(" "),
+              _c("a", [
+                _c("h3", [
+                  _c("span", { staticClass: "fas fa-phone" }),
+                  _vm._v(" Teléfonos")
+                ]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "tel:7765-0501" } }, [
+                  _vm._v(" 7765-0501")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row col-sm-12 col-md-4 " }, [
+              _c("a", [
+                _c("h3", [
+                  _c("span", { staticClass: "fas fa-globe-americas" }),
+                  _vm._v(" Sitio Web")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "https://www.zetamarketingconsultores.com/" }
+                  },
+                  [
+                    _vm._v(
+                      "https://www.zetamarketingconsultores.com/\n                                               "
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("a", [
+                _c("h3", [
+                  _c("span", { staticClass: "fas fa-share-alt" }),
+                  _vm._v(" Redes Sociales")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "fb-ic",
+                    attrs: {
+                      href:
+                        "https://www.facebook.com/OtorrinOnline.gt/?fref=ts",
+                      target: "_blank"
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass:
+                        "fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-1x"
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("a", { staticClass: "tw-ic" }, [
+                  _c("i", {
+                    staticClass:
+                      "fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1x"
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "gplus-ic" }, [
+                  _c("i", {
+                    staticClass:
+                      "fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-1x"
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "li-ic" }, [
+                  _c("i", {
+                    staticClass:
+                      "fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-1x"
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "ins-ic" }, [
+                  _c("i", {
+                    staticClass:
+                      "fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-1x"
+                  })
+                ]),
+                _vm._v(" "),
+                _c("a", { staticClass: "pin-ic" }, [
+                  _c("i", {
+                    staticClass: "fab fa-pinterest fa-lg white-text fa-1x"
+                  })
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container contactop" }, [
       _c(
         "div",
@@ -46413,134 +46548,6 @@ var staticRenderFns = [
           })
         ]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
-          _vm._v(
-            "\n                                   Contacto\n                               "
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("blockquote", { staticClass: "blockquote mb-0" }, [
-            _c("a", [
-              _c("h3", [
-                _c("span", { staticClass: "far fa-clock " }),
-                _vm._v(" Horario de atencion")
-              ]),
-              _vm._v(" "),
-              _c("p", [_vm._v("8:00am a 6:pm")])
-            ]),
-            _vm._v(" "),
-            _c("a", [
-              _c("h3", [
-                _c("span", { staticClass: "fas fa-envelope" }),
-                _vm._v(" Correo Electronico")
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                { attrs: { href: "mailto:edsoncipriano810@gmail.com" } },
-                [_vm._v(" edsoncipriano810@gmail.com")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("a", [
-              _c("h3", [
-                _c("span", { staticClass: "fas fa-phone" }),
-                _vm._v(" Teléfonos")
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "tel:7765-0501" } }, [
-                _vm._v(" 7765-0501")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("a", [
-              _c("h3", [
-                _c("span", { staticClass: "fas fa-globe-americas" }),
-                _vm._v(" Sitio Web")
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  attrs: { href: "https://www.zetamarketingconsultores.com/" }
-                },
-                [
-                  _vm._v(
-                    "https://www.zetamarketingconsultores.com/\n                                           "
-                  )
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("a", [
-              _c("h3", [
-                _c("span", { staticClass: "fas fa-share-alt" }),
-                _vm._v(" Redes Sociales")
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "fb-ic",
-                  attrs: {
-                    href: "https://www.facebook.com/OtorrinOnline.gt/?fref=ts",
-                    target: "_blank"
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass:
-                      "fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-1x"
-                  })
-                ]
-              ),
-              _vm._v(" "),
-              _c("a", { staticClass: "tw-ic" }, [
-                _c("i", {
-                  staticClass:
-                    "fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1x"
-                })
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "gplus-ic" }, [
-                _c("i", {
-                  staticClass:
-                    "fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-1x"
-                })
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "li-ic" }, [
-                _c("i", {
-                  staticClass:
-                    "fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-1x"
-                })
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "ins-ic" }, [
-                _c("i", {
-                  staticClass:
-                    "fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-1x"
-                })
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "pin-ic" }, [
-                _c("i", {
-                  staticClass: "fab fa-pinterest fa-lg white-text fa-1x"
-                })
-              ])
-            ])
-          ])
-        ])
-      ])
     ])
   },
   function() {

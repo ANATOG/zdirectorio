@@ -31,9 +31,9 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    -webkit-animation: girar 1.5s linear infinite;
-    -o-animation: girar 1.5s linear infinite;
-    animation: girar 1.5s linear infinite;
+    -webkit-animation: girar 0.5s linear infinite;
+    -o-animation: girar 0.5s linear infinite;
+    animation: girar 0.5s linear infinite;
 }
 
 @keyframes girar {
@@ -47,12 +47,6 @@
 
 .fotografiaredonda {
     margin-top: -120px;
-}
-
-.navbar {
-    position: fixed;
-    z-index: 1001;
-    width: 100%;
 }
 
 .roundfoto {
@@ -193,12 +187,6 @@
 
 .buscador {
     border-radius: 11px !important;
-}
-
-#header {
-    position: fixed;
-    width: 100%;
-    z-index: 1001;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

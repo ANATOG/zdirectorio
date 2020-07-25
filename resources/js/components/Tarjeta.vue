@@ -1,5 +1,5 @@
  <template>
-     <div class="container">
+     <div class="container text-center">
          <div class="container text-center">
              <div class="row">
 
@@ -14,24 +14,19 @@
                      <div class="card-body">
                          <div>
                              <h5 class="card-title">Edson Esteban </h5>
-                             <p class="card-text">Ingeniero en Sistemas</p>
+                             <p class="card-subtitle mb-1 text-muted">Ingeniero en Sistemas</p>
                          </div>
 
                          <div class=" row justify-content-center justify-content-md-start ">
                              <div class="dropdown">
-                                 <a class="btn btn-default btn-circle btn-xl  dropdown" role="button"
-                                     id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                     aria-expanded="false">
+                                 <a class="btn btn-default btn-circle btn-xl  dropdown" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                      <span class="fas fa-share-alt" id="icolor"></span>
                                  </a>
 
                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                     <a class="dropdown-item" href="#"> <span class="fab fa-facebook-f"
-                                             id="icolor"></span></a>
-                                     <a class="dropdown-item" href="#"><span class="fab fa-twitter"
-                                             id="icolor"></span></a>
-                                     <a class="dropdown-item" href="#"><span class="fab fa-linkedin-in"
-                                             id="icolor"></span></a>
+                                     <a class="dropdown-item" href="#"> <span class="fab fa-facebook-f" id="icolor"></span></a>
+                                     <a class="dropdown-item" href="#"><span class="fab fa-twitter" id="icolor"></span></a>
+                                     <a class="dropdown-item" href="#"><span class="fab fa-linkedin-in" id="icolor"></span></a>
                                  </div>
 
                              </div>
@@ -39,20 +34,17 @@
 
                              <div class="btn btn-default btn-circle btn-xl">
                                  <a href="#" role="button">
-                                     <span class="fas fa-map-marker-alt" id="icolor">
-                                     </span>
+                                     <span class="fas fa-map-marker-alt" id="icolor"></span>
                                  </a>
                              </div>
                              <div class="btn btn-default btn-circle btn-xl">
                                  <a href="#" role="button">
-                                     <span class="fas fa-phone-volume" id="icolor">
-                                     </span>
+                                     <span class="fas fa-phone-volume" id="icolor"></span>
                                  </a>
                              </div>
                              <div class="btn btn-default btn-circle btn-xl">
                                  <a href="#" role="button">
-                                     <span class="fab fa-whatsapp" id="icolor">
-                                     </span>
+                                     <span class="fab fa-whatsapp" id="icolor"></span>
                                  </a>
                              </div>
                          </div>
@@ -151,11 +143,7 @@
                             </div>
                             <br>
                             <br>
-                            <div class="container contactop">
-                                <div id="map-container-google-1" class="z-depth-1-half map-container">
-                                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                </div>
-                            </div>
+                           
                             <div class="container">
                                 <div class="card">
                                     <div class="card-header">
@@ -163,57 +151,65 @@
                                     </div>
                                     <div class="card-body">
                                         <blockquote class="blockquote mb-0">
+                                            <div class="row col-sm-12 col-md-4 ">
+                                                <a>
+                                                    <h3><span class="far fa-clock "></span> Horario de atencion</h3>
+                                                    <p>8:00am a 6:pm</p>
+                                                </a>
 
-                                            <a>
-                                                <h3><span class="far fa-clock "></span> Horario de atencion</h3>
-                                                <p>8:00am a 6:pm</p>
-                                            </a>
+                                                <a>
+                                                    <h3><span class="fas fa-envelope"></span> Correo Electronico</h3>
+                                                    <a href="mailto:edsoncipriano810@gmail.com"> edsoncipriano810@gmail.com</a>
+                                                </a>
 
-                                            <a>
-                                                <h3><span class="fas fa-envelope"></span> Correo Electronico</h3>
-                                                <a href="mailto:edsoncipriano810@gmail.com"> edsoncipriano810@gmail.com</a>
-                                            </a>
-
-                                            <a>
-                                                <h3><span class="fas fa-phone"></span> Teléfonos</h3>
-                                                <a href="tel:7765-0501"> 7765-0501</a>
-                                            </a>
-
-                                            <a>
-                                                <h3><span class="fas fa-globe-americas"></span> Sitio Web</h3>
-                                                <a href="https://www.zetamarketingconsultores.com/">https://www.zetamarketingconsultores.com/
+                                                <a>
+                                                    <h3><span class="fas fa-phone"></span> Teléfonos</h3>
+                                                    <a href="tel:7765-0501"> 7765-0501</a>
                                                 </a>
-                                            </a>
-                                            <a>
-                                                <h3><span class="fas fa-share-alt"></span> Redes Sociales</h3>
-                                                <!-- Facebook -->
-                                                <a class="fb-ic" href="https://www.facebook.com/OtorrinOnline.gt/?fref=ts" target="_blank">
-                                                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
+                                            </div>
+                                            <div class="row col-sm-12 col-md-4 ">
+                                                <a>
+                                                    <h3><span class="fas fa-globe-americas"></span> Sitio Web</h3>
+                                                    <a href="https://www.zetamarketingconsultores.com/">https://www.zetamarketingconsultores.com/
+                                                    </a>
                                                 </a>
-                                                <!-- Twitter -->
-                                                <a class="tw-ic">
-                                                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
+                                                <a>
+                                                    <h3><span class="fas fa-share-alt"></span> Redes Sociales</h3>
+                                                    <!-- Facebook -->
+                                                    <a class="fb-ic" href="https://www.facebook.com/OtorrinOnline.gt/?fref=ts" target="_blank">
+                                                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
+                                                    </a>
+                                                    <!-- Twitter -->
+                                                    <a class="tw-ic">
+                                                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
+                                                    </a>
+                                                    <!-- Google +-->
+                                                    <a class="gplus-ic">
+                                                        <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-1x">
+                                                        </i>
+                                                    </a>
+                                                    <!--Linkedin -->
+                                                    <a class="li-ic">
+                                                        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
+                                                    </a>
+                                                    <!--Instagram-->
+                                                    <a class="ins-ic">
+                                                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
+                                                    </a>
+                                                    <!--Pinterest-->
+                                                    <a class="pin-ic">
+                                                        <i class="fab fa-pinterest fa-lg white-text fa-1x"> </i>
+                                                    </a>
                                                 </a>
-                                                <!-- Google +-->
-                                                <a class="gplus-ic">
-                                                    <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-1x">
-                                                    </i>
-                                                </a>
-                                                <!--Linkedin -->
-                                                <a class="li-ic">
-                                                    <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
-                                                </a>
-                                                <!--Instagram-->
-                                                <a class="ins-ic">
-                                                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-1x"> </i>
-                                                </a>
-                                                <!--Pinterest-->
-                                                <a class="pin-ic">
-                                                    <i class="fab fa-pinterest fa-lg white-text fa-1x"> </i>
-                                                </a>
-                                            </a>
+                                            </div>
                                         </blockquote>
                                     </div>
+                                </div>
+                            </div>
+
+                             <div class="container contactop">
+                                <div id="map-container-google-1" class="z-depth-1-half map-container">
+                                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </main>
