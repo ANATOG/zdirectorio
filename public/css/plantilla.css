@@ -188,6 +188,10 @@
 .buscador {
     border-radius: 11px !important;
 }
+
+.bg-dark {
+    opacity: 0.9;
+}
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

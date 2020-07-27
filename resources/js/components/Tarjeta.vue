@@ -8,13 +8,13 @@
                      </svg>
 
                      <div class="fotografiaredonda">
-                         <img src="https://www.incp.org.co/wp-content/uploads/2018/09/Director-DIAN-500x445.jpg" data-toggle="modal" data-target=".bd-example-modal-xl" class="roundfoto" alt="fotografía">
+                         <img src="https://scontent.fgua3-1.fna.fbcdn.net/v/t1.0-9/106493136_1566125633566753_4316472432266691409_n.png?_nc_cat=102&_nc_sid=85a577&_nc_ohc=muFXypgLJWwAX_VZvhL&_nc_ht=scontent.fgua3-1.fna&oh=1f968ae41d9006449bfbf2518886c049&oe=5F441806" data-toggle="modal" data-target=".bd-example-modal-xl" class="roundfoto" alt="fotografía">
                      </div>
 
                      <div class="card-body">
                          <div>
-                             <h5 class="card-title">Edson Esteban </h5>
-                             <p class="card-subtitle mb-1 text-muted">Ingeniero en Sistemas</p>
+                             <h5 class="card-title">La Fonda de Don Juan </h5>
+                             <p class="card-subtitle mb-1 text-muted">pizzeria</p>
                          </div>
 
                          <div class=" row justify-content-center justify-content-md-start ">
@@ -71,7 +71,7 @@
                             </div>
                             <div class="row">
                                 <div class="fotografiaredondap">
-                                    <img src="https://www.incp.org.co/wp-content/uploads/2018/09/Director-DIAN-500x445.jpg" class="roundfotop" alt="fotografía">
+                                    <img src="https://scontent.fgua3-1.fna.fbcdn.net/v/t1.0-9/106493136_1566125633566753_4316472432266691409_n.png?_nc_cat=102&_nc_sid=85a577&_nc_ohc=muFXypgLJWwAX_VZvhL&_nc_ht=scontent.fgua3-1.fna&oh=1f968ae41d9006449bfbf2518886c049&oe=5F441806" class="roundfotop" alt="fotografía">
                                 </div>
                                 <div class="infop">
                                     <div class="nombreP">

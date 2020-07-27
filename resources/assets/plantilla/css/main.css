@@ -188,3 +188,7 @@
 .buscador {
     border-radius: 11px !important;
 }
+
+.bg-dark {
+    opacity: 0.9;
+}

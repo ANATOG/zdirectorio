@@ -1,6 +1,4 @@
- 
-   
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
             <img src="/img/logodirectorio.png" class="d-inline-block align-top" alt="logo">
         </a>
@@ -20,12 +18,10 @@
               <a class="nav-link" href="#">Empresas</a>
             </li>
           </ul>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" >Busqueda</a>
-          </li>
+          
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 buscador" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            <input class="form-control mr-sm-4 buscador" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
     </nav>

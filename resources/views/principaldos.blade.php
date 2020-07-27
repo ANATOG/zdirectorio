@@ -94,6 +94,7 @@
         </main>
     </div>
     <!-- Optional JavaScript -->
+    
     <script>
         window.onload = function () {
             var contenedor = document.getElementById("contenedor_carga");
@@ -101,6 +102,7 @@
             contenedor.style.opacity = '0';
         }
     </script>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/app.js"></script>
 
